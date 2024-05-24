@@ -7,6 +7,7 @@
   --green: #8cc63f;
   --red: #f28585;
   --orange: #fcb721;
+  --light-gray: #e6e6e6;
 }
 
 /* general styles */
@@ -36,15 +37,23 @@ button {
   border-radius: 20px;
   border: none;
   padding: 6px;
-  margin: 5px 0;
+  margin: 3px 0;
 }
 
 .dark-blue {
   background-color: var(--blue3);
 }
 
+.dark-blue:hover {
+  background-color: #78b6dc;
+}
+
 .mid-blue {
   background-color: var(--blue2);
+}
+
+.mid-blue:hover {
+  background-color: #9ed0dd;
 }
 
 .poke-card-container {
@@ -55,8 +64,29 @@ button {
 
 .poke-img-container {
   background-color: var(--light);
-  width: 200px;
-  height: 200px;
+  /* height: 200px; */
   border-radius: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.x-button {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: var(--light-gray);
+  position: absolute;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.x-button:hover {
+  background-color: rgb(201, 201, 201);
+  cursor: pointer;
+}
+.poke-img-container img {
+  width: 100%;
 }
