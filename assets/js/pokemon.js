@@ -22,5 +22,3 @@ createCard();
 createCard();
 createCard();
 createCard();
-createCard();
-createCard();

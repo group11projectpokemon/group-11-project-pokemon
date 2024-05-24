@@ -16,7 +16,7 @@ body {
 }
 
 .shadow1 {
-  box-shadow: 0 0 4px #5151512c;
+  box-shadow: 0 0 5px #51515115;
 }
 
 /* header styles */
@@ -103,4 +103,27 @@ button {
   display: flex;
   justify-content: center;
   margin: 40px;
+}
+
+/* Add new pokemon button styles */
+#add-new {
+  background-color: #ffffff6a;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-new:hover {
+  cursor: pointer;
+}
+
+#add-new:hover .plus-button {
+  background-color: rgb(201, 201, 201);
+}
+
+.plus-button {
+  background-color: var(--light-gray);
+  border-radius: 100%;
 }
