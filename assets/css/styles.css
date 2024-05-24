@@ -2,8 +2,8 @@
   --light: #ffffff;
   --dark: #000000;
   --blue1: #e8f5fa;
-  --blue2: #c8effa;
-  --blue3: #a7dafa;
+  --blue2: #b7e2ed;
+  --blue3: #8cc5e9;
   --green: #8cc63f;
   --red: #f28585;
   --orange: #fcb721;
@@ -15,7 +15,7 @@ body {
 }
 
 .shadow1 {
-  box-shadow: 0 0 6px #5151512c;
+  box-shadow: 0 0 4px #5151512c;
 }
 
 /* header styles */
@@ -29,4 +29,34 @@ header {
 header p {
   width: 300px;
   margin: 0 3%;
+}
+
+/* pokemon roster section styles */
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 6px;
+  margin: 5px 0;
+}
+
+.dark-blue {
+  background-color: var(--blue3);
+}
+
+.mid-blue {
+  background-color: var(--blue2);
+}
+
+.poke-card-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.poke-img-container {
+  background-color: var(--light);
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 5px;
 }
