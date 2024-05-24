@@ -1,0 +1,42 @@
+body, html {
+    font-family: Arial, sans-serif; /* Sets the font for the entire page */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+#app {
+    text-align: center;
+    width: 80%; /* Adjusts the width of the app container */
+    margin-top: 20px;
+}
+
+header {
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    gap: 10px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+.pokemon {
+    border: 1px solid #ccc; /* Border around each PokÃ©mon */
+    padding: 10px;
+    text-align: center;
+}
+
+.pokemon img {
+    width: 100px; /* Width of PokÃ©mon images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.pokemon span {
+    display: block; /* Makes the text appear on a new line below the image */
+    margin-top: 10px; /* Space above the name */
+}
