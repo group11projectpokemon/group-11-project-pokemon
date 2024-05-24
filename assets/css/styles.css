@@ -33,6 +33,7 @@ header p {
 }
 
 /* pokemon roster section styles */
+/* styles for a single pokemon card */
 button {
   border-radius: 20px;
   border: none;
@@ -89,4 +90,17 @@ button {
 }
 .poke-img-container img {
   width: 100%;
+}
+
+/* Pokemon roster grid styles */
+#poke-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px 26px;
+}
+
+.roster-section {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
 }
