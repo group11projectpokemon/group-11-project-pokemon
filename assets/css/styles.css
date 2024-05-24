@@ -1,0 +1,129 @@
+:root {
+  --light: #ffffff;
+  --dark: #000000;
+  --blue1: #e8f5fa;
+  --blue2: #b7e2ed;
+  --blue3: #8cc5e9;
+  --green: #8cc63f;
+  --red: #f28585;
+  --orange: #fcb721;
+  --light-gray: #e6e6e6;
+}
+
+/* general styles */
+body {
+  background-color: var(--blue1);
+}
+
+.shadow1 {
+  box-shadow: 0 0 5px #51515115;
+}
+
+/* header styles */
+header {
+  background-color: var(--light);
+  display: flex;
+  padding: 20px 5%;
+  align-items: center;
+}
+
+header p {
+  width: 300px;
+  margin: 0 3%;
+}
+
+/* pokemon roster section styles */
+/* styles for a single pokemon card */
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 6px;
+  margin: 3px 0;
+}
+
+.dark-blue {
+  background-color: var(--blue3);
+}
+
+.dark-blue:hover {
+  background-color: #78b6dc;
+}
+
+.mid-blue {
+  background-color: var(--blue2);
+}
+
+.mid-blue:hover {
+  background-color: #9ed0dd;
+}
+
+.poke-card-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.poke-img-container {
+  background-color: var(--light);
+  /* height: 200px; */
+  border-radius: 20px;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.x-button {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: var(--light-gray);
+  position: absolute;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.x-button:hover {
+  background-color: rgb(201, 201, 201);
+  cursor: pointer;
+}
+.poke-img-container img {
+  width: 100%;
+}
+
+/* Pokemon roster grid styles */
+#poke-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px 26px;
+}
+
+.roster-section {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+/* Add new pokemon button styles */
+#add-new {
+  background-color: #ffffff6a;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-new:hover {
+  cursor: pointer;
+}
+
+#add-new:hover .plus-button {
+  background-color: rgb(201, 201, 201);
+}
+
+.plus-button {
+  background-color: var(--light-gray);
+  border-radius: 100%;
+}
