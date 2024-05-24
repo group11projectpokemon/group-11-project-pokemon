@@ -1,0 +1,32 @@
+:root {
+  --light: #ffffff;
+  --dark: #000000;
+  --blue1: #e8f5fa;
+  --blue2: #c8effa;
+  --blue3: #a7dafa;
+  --green: #8cc63f;
+  --red: #f28585;
+  --orange: #fcb721;
+}
+
+/* general styles */
+body {
+  background-color: var(--blue1);
+}
+
+.shadow1 {
+  box-shadow: 0 0 6px #5151512c;
+}
+
+/* header styles */
+header {
+  background-color: var(--light);
+  display: flex;
+  padding: 20px 5%;
+  align-items: center;
+}
+
+header p {
+  width: 300px;
+  margin: 0 3%;
+}
