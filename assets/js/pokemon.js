@@ -1,3 +1,7 @@
+let pokemonRosterArray = localStorage.getItem("pokemonRosterArray") || [];
+console.log(pokemonRosterArray);
+
+
 // This function creates the card structure for a pokemon
 function createCard() {
   const pokeCard =
