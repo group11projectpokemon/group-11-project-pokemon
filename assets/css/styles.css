@@ -8,6 +8,7 @@
   --red: #f28585;
   --orange: #fcb721;
   --light-gray: #e6e6e6;
+  --dark-gray: #909090;
 }
 
 /* general styles */
@@ -90,6 +91,7 @@ button {
 }
 .poke-img-container img {
   width: 200px;
+
 }
 
 /* Pokemon roster grid styles */
@@ -108,9 +110,13 @@ button {
 /* Add new pokemon button styles */
 #add-new {
   background-color: #ffffff6a;
+  color: var(--dark-gray);
+  font-weight: 500;
   height: 200px;
+  width: 200px;
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -126,4 +132,5 @@ button {
 .plus-button {
   background-color: var(--light-gray);
   border-radius: 100%;
+  margin: 20px;
 }
