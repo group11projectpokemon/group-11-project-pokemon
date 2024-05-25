@@ -89,7 +89,7 @@ button {
   cursor: pointer;
 }
 .poke-img-container img {
-  width: 100%;
+  width: 200px;
 }
 
 /* Pokemon roster grid styles */
