@@ -12,14 +12,27 @@
 </head>
 <body>
   
+  <header class="shadow1">
+    <h1>PokéLounge</h1>
+    <p>Add up to 6 pokemon to your lounge and generate entertainment recommendations based on their combined qualities</p>
+  </header>
 
+  <!-- section with the pokemon roster -->
+  <section class="roster-section">
+    <!-- container for the pokemon grid -->
+    <div id="poke-grid">
+      <!-- cards will append here after being created with js -->
 
+      <!-- card to add a new pokemon -->
+      <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="plus-button">
+          <img src="./assets/images/+.png">
+        </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch modal
-</button>
-
+      </div>
+    </div>
+  </section>
+  
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
