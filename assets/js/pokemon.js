@@ -24,6 +24,7 @@ function createAddButton() {
     <div class="plus-button">
       <img src="./assets/images/+.png">
     </div>
+    <p>Add Pokémon<p>
   </div>
   `)
   $('#poke-grid').append(addButton);
@@ -79,7 +80,8 @@ function fetchPokeImg(pokemonName) {
     console.log(data);
     // maybe we could put everything we need to generate the chart into this object as well so we don't have to call again? IDK
     let pokemon = {
-      name : (pokemonName),
+      // capitalizes the name
+      name : pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1),
       imgSrc : (data.sprites.front_default),
     }
     console.log(pokemon.imgSrc);
