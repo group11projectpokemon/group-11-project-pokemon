@@ -91,12 +91,5 @@ function fetchPokeImg(pokemonName) {
   })
 }
 
-// play pokemon cry on click
-$(document).on('click', '.poke-img', function() {
-  let audioSrc = this.dataset.audio;
-  let audio = new Audio(audioSrc);
-  audio.play();
-});
-
 // show pokemon in storage on page load
 iterateArray()
