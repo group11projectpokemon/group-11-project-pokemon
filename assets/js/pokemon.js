@@ -4,7 +4,7 @@ function createCard(pokemon) {
   $(`
   <div class="poke-card-container">
     <div class="poke-img-container shadow1">
-      <div class="x-button">
+      <div class="x-button" data-name=${pokemon.name}>
         <img src="./assets/images/x-15.png">
       </div>
         <img class="poke-img" src=${pokemon.imgSrc} data-audio=${pokemon.cry}>
@@ -37,7 +37,6 @@ function createAddButton() {
 // createCard();
 
 let pokemonRosterArray = JSON.parse(localStorage.getItem("pokemonRosterArray")) || [];
-console.log(pokemonRosterArray);
 const submitNewPokemon = document.getElementById('submit-new-pokemon');
 const pokemonInput = document.getElementById("pokelist");
 
@@ -60,6 +59,10 @@ function iterateArray() {
 
   // create the add button
   createAddButton();
+
+  // get the array from local storage
+  let pokemonRosterArray = JSON.parse(localStorage.getItem("pokemonRosterArray")) || [];
+
   // iterate through array for pokemonName, send to fetch PokeImg
   for (let i = 0; i < pokemonRosterArray.length; i++) {
     let pokemonName = pokemonRosterArray[i];
@@ -90,6 +93,22 @@ function fetchPokeImg(pokemonName) {
     createCard(pokemon);
   })
 }
+
+// Removes a pokemon from the roster
+$(document).on('click', '.x-button', function() {
+  // get the name of the pokemon and make it lowercase
+  let pokemonName = this.dataset.name.toLowerCase();
+  console.log(pokemonName);
+
+  let pokemonRoster = JSON.parse(localStorage.getItem("pokemonRosterArray")) || [];
+
+  console.log(pokemonRoster);
+  pokemonRoster = pokemonRoster.filter(pokemon => pokemon !== pokemonName);
+  console.log(pokemonRoster);
+  localStorage.setItem("pokemonRosterArray", JSON.stringify(pokemonRoster));
+
+  iterateArray();
+});
 
 // show pokemon in storage on page load
 iterateArray()
