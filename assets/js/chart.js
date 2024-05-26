@@ -14,11 +14,12 @@ function renderChart() {
     fetchPokemonData(pokemon).then((data) => {
         const ctx = document.getElementById('myChart').getContext('2d');
         const chart = new Chart(ctx, {
-            type: 'radar', // Change this to the desired chart type (e.g., 'line', 'bar', 'radar')
+            type: 'polarArea', // Change this to the desired chart type (e.g., 'line', 'bar', 'radar')
             data: {
                 labels: ['HP', 'Attack', 'Defense', 'Special Attack', 'Special Defense', 'Speed'],
                 datasets: [{
-                    label: `${data.name.charAt(0).toUpperCase() + data.name.slice(1)} Stats`,
+                    //label: `${data.name.charAt(0).toUpperCase() + data.name.slice(1)} Stats`,
+                    label: 'Combined Stats of Rostered Pokemon',
                     data: [
                         data.stats[0].base_stat,
                         data.stats[1].base_stat,
@@ -46,17 +47,7 @@ function renderChart() {
                     borderWidth: 1
                 }]
             },
-            options: {
-                scales: {
-                    r: {
-                        angleLines: {
-                            display: false
-                        },
-                        suggestedMin: 0,
-                        suggestedMax: 150
-                    }
-                }
-            }
+            options: {}
         });
     });
 }

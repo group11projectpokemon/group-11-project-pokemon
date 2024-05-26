@@ -7,7 +7,7 @@ function createCard(pokemon) {
       <div class="x-button">
         <img src="./assets/images/x-15.png">
       </div>
-        <img src=${pokemon.imgSrc}>
+        <img class="poke-img" src=${pokemon.imgSrc} data-audio=${pokemon.cry}>
     </div>
     <button class="dark-blue shadow1">${pokemon.name}</button>
     <button class="mid-blue shadow1">About</button>
@@ -83,13 +83,20 @@ function fetchPokeImg(pokemonName) {
       // capitalizes the name
       name : pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1),
       imgSrc : (data.sprites.front_default),
+      cry : data.cries.latest
     }
     console.log(pokemon.imgSrc);
     console.log(pokemon.id);
-
     createCard(pokemon);
   })
 }
+
+// play pokemon cry on click
+$(document).on('click', '.poke-img', function() {
+  let audioSrc = this.dataset.audio;
+  let audio = new Audio(audioSrc);
+  audio.play();
+});
 
 // show pokemon in storage on page load
 iterateArray()
