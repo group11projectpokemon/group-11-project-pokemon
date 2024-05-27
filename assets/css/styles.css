@@ -186,12 +186,12 @@ button {
 #slot2 {
   translate: 98% -125%;
   transform: scaleX(-1);
-  rotate: 8deg;
+  rotate: 2deg;
   z-index: 100;
 }
 
 #slot3 {
   translate: 202% -125%;
-  rotate: -8deg;
+  rotate: -2deg;
   z-index: 100;
 }
