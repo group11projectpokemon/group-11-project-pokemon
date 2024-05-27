@@ -19,7 +19,16 @@
   </header>
 
   <!-- This is a new idea for a background, with positioned div's for the pokemon -->
+  <div class="camp-container">
     <img src="./assets/images/campfire.webp" class="camp">
+
+    <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <div class="plus-button">
+        <img src="./assets/images/+.png">
+      </div>
+      <p>Choose Pokémon</p>
+    </div>
+
     <!-- the images inside the div's are here temporarily, but will be added with JavaScript from the API -->
     <div id="slot0" class="slot">
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png">
@@ -33,11 +42,7 @@
     <div id="slot3" class="slot">
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png">
     </div>
-
-
-  <section class="campfire">
-
-  </section>
+  </div>
 
   <!-- section with the pokemon roster -->
   <section class="roster-section">
