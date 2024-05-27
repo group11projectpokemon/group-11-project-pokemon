@@ -17,24 +17,19 @@ function createCard(pokemon) {
   $('#poke-grid').prepend(pokeCard);
 }
 
-function createAddButton() {
-  const addButton =
-  $(`
-  <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <div class="plus-button">
-      <img src="./assets/images/+.png">
-    </div>
-    <p>Add Pokémon<p>
-  </div>
-  `)
-  $('#poke-grid').append(addButton);
-}
-
-// for now I just had it make 6 cards to test the grid, but obvs this'll be replaced by a for loop through their array in local storage
-// createCard();
-// createCard();
-// createCard();
-// createCard();
+// DON'T NEED THIS FUNCITON ANYMORE WITH THE CAMPFIRE
+// function createAddButton() {
+//   const addButton =
+//   $(`
+//   <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+//     <div class="plus-button">
+//       <img src="./assets/images/+.png">
+//     </div>
+//     <p>Add Pokémon<p>
+//   </div>
+//   `)
+//   $('#poke-grid').append(addButton);
+// }
 
 let pokemonRosterArray = JSON.parse(localStorage.getItem("pokemonRosterArray")) || [];
 const submitNewPokemon = document.getElementById('submit-new-pokemon');
@@ -57,8 +52,8 @@ function iterateArray() {
   // first remove any existing cards
   $('#poke-grid').html("");
 
-  // create the add button
-  createAddButton();
+  // create the add button - don't need this anymore
+  // createAddButton();
 
   // get the array from local storage
   let pokemonRosterArray = JSON.parse(localStorage.getItem("pokemonRosterArray")) || [];

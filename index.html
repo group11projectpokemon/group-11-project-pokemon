@@ -18,6 +18,32 @@
     <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" aria-label="volume control">
   </header>
 
+  <!-- This is a new idea for a background, with positioned div's for the pokemon -->
+  <div class="camp-container">
+    <img src="./assets/images/campfire.webp" class="camp">
+
+    <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <div class="plus-button">
+        <img src="./assets/images/+.png">
+      </div>
+      <p>Choose Pokémon</p>
+    </div>
+
+    <!-- the images inside the div's are here temporarily, but will be added with JavaScript from the API -->
+    <div id="slot0" class="slot">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png">
+    </div>
+    <div id="slot1" class="slot">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png">
+    </div>
+    <div id="slot2" class="slot">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png">
+    </div>
+    <div id="slot3" class="slot">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png">
+    </div>
+  </div>
+
   <!-- section with the pokemon roster -->
   <section class="roster-section">
     <!-- container for the pokemon grid -->
@@ -44,11 +70,12 @@
       <div class="modal-body">
         <div class="input-group mb-3 ui-front">
           <input id="pokelist" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <button id="submit-new-pokemon" >Add</button>
         </div>
+        <div id="poke-roster"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button id="submit-new-pokemon" data-bs-dismiss="modal">Add to your lounge</button>
       </div>
     </div>
   </div>

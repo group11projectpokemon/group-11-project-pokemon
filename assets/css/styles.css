@@ -104,21 +104,27 @@ button {
 .roster-section {
   display: flex;
   justify-content: center;
-  margin: 40px;
+  /* margin: 40px; */
 }
 
 /* Add new pokemon button styles */
 #add-new {
-  background-color: #ffffff6a;
-  color: var(--dark-gray);
+  background-color: #00000086;
+  color: var(--light);
+  /* text-align: center; */
   font-weight: 500;
-  height: 200px;
-  width: 200px;
-  border-radius: 20px;
+  border-radius: 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  position: absolute;
+  margin: 16px;
+  padding: 10px;
+}
+
+#add-new p {
+  /* margin has to be set to 0 cause of bootstrap <p> */
+  margin: 0;
 }
 
 #add-new:hover {
@@ -130,7 +136,59 @@ button {
 }
 
 .plus-button {
-  background-color: var(--light-gray);
+  background-color: var(--light);
   border-radius: 100%;
-  margin: 20px;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.plus-button img {
+  width: 100%;
+}
+
+/* New campfire section styles */
+.camp {
+  width: 100%;
+  max-width: 1200px;
+  position: absolute;
+  z-index: -100;
+}
+
+.camp-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.slot {
+  width: 25%;
+  aspect-ratio: 1/1;
+  /* remove this border color later */
+  /* border: 2px solid red; */
+  position: relative;
+}
+
+.slot img {
+  width: 100%
+}
+
+#slot0 {
+  translate: 98% 105%;
+  z-index: 100;
+  transform: scaleX(-1);
+}
+
+#slot1 {
+  translate: 90% -54%;
+  transform: scaleX(-1);
+}
+
+#slot2 {
+  translate: 210% -154%;
+}
+
+#slot3 {
+  translate: 202% -195%;
+  z-index: 100;
 }
