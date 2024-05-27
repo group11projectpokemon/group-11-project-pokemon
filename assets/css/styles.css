@@ -111,15 +111,14 @@ button {
 #add-new {
   background-color: #00000086;
   color: var(--light);
-  /* text-align: center; */
   font-weight: 500;
+  margin: 16px;
+  padding: 10px;
   border-radius: 40px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   position: absolute;
-  margin: 16px;
-  padding: 10px;
+  top: 0;
 }
 
 #add-new p {
@@ -147,18 +146,18 @@ button {
 }
 
 /* New campfire section styles */
-.camp {
-  width: 100%;
-  max-width: 1200px;
-  position: absolute;
-  z-index: -100;
-}
-
 .camp-container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  position: relative;
+  position: relative
+}
+
+.camp {
+  width: 100%;
+  max-width: 1200px;
+  /* position: absolute; */
+  z-index: -100;
 }
 
 .slot {
@@ -166,7 +165,7 @@ button {
   aspect-ratio: 1/1;
   /* remove this border color later */
   /* border: 2px solid red; */
-  position: relative;
+  position: absolute;
 }
 
 .slot img {
@@ -174,21 +173,25 @@ button {
 }
 
 #slot0 {
-  translate: 98% 105%;
-  z-index: 100;
+  translate: 86% -182%;
   transform: scaleX(-1);
+  rotate: -8deg;
 }
 
 #slot1 {
-  translate: 90% -54%;
-  transform: scaleX(-1);
+  translate: 214% -182%;
+  rotate: 8deg;
 }
 
 #slot2 {
-  translate: 210% -154%;
+  translate: 98% -125%;
+  transform: scaleX(-1);
+  rotate: 8deg;
+  z-index: 100;
 }
 
 #slot3 {
-  translate: 202% -195%;
+  translate: 202% -125%;
+  rotate: -8deg;
   z-index: 100;
 }
