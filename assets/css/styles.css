@@ -104,7 +104,7 @@ button {
 .roster-section {
   display: flex;
   justify-content: center;
-  margin: 40px;
+  /* margin: 40px; */
 }
 
 /* Add new pokemon button styles */
@@ -133,4 +133,41 @@ button {
   background-color: var(--light-gray);
   border-radius: 100%;
   margin: 20px;
+}
+
+/* New campfire section styles */
+.camp {
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+}
+
+.slot {
+  width: 25%;
+  aspect-ratio: 1/1;
+  /* remove this border color later */
+  border: 2px solid red;
+  position: relative;
+}
+
+.slot img {
+  width: 100%
+}
+
+#slot0 {
+  translate: 98% 105%;
+  z-index: 100;
+}
+
+#slot1 {
+  translate: 90% -54%;
+}
+
+#slot2 {
+  translate: 216% -154%;
+}
+
+#slot3 {
+  translate: 204% -195%;
+  z-index: 100;
 }
