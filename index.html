@@ -12,35 +12,45 @@
 </head>
 <body>
   
+
   <header class="shadow1">
     <h1>PokéLounge</h1>
     <p>Add up to 6 pokemon to your lounge and generate entertainment recommendations based on their combined qualities</p>
     <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" aria-label="volume control">
+
+    <!-- background music player -->
+    <audio id="backgroundMusic"></audio>
+
+    <div class="music-player">
+      <button id="playButton" class="music-button" aria-label="play music">Play</button>
+      <button id="nextButton" class="music-button" aria-label="next song">Next</button>
+    </div>
+
   </header>
 
   <!-- This is a new idea for a background, with positioned div's for the pokemon -->
   <div class="camp-container">
-    <img src="./assets/images/campfire.webp" class="camp">
+    <img src="./assets/images/campfire.webp" class="camp" alt="description here">
 
     <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <div class="plus-button">
-        <img src="./assets/images/+.png">
+        <img src="./assets/images/+.png" alt="description here">
       </div>
       <p>Choose Pokémon</p>
     </div>
 
     <!-- the images inside the div's are here temporarily, but will be added with JavaScript from the API -->
     <div id="slot0" class="slot">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="description here">
     </div>
     <div id="slot1" class="slot">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png" alt="description here">
     </div>
     <div id="slot2" class="slot">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="description here">
     </div>
     <div id="slot3" class="slot">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" alt="description here">
     </div>
   </div>
 
@@ -96,6 +106,7 @@
   <script src = "./assets/js/modal.js"></script>
   <script src = "./assets/js/volume.js"></script>
   <script src = "./assets/js/chuck.js"></script>
+  <script src = "./assets/js/musicPlayer.js"></script>
   <!-- <script src="./assets/js/chart.js"></script> -->
 </body>
 </html>
