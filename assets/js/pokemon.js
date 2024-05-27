@@ -2,16 +2,16 @@
 function createCard(pokemon) {
   const pokeCard =
   $(`
-  <div class="poke-card-container">
-    <div class="poke-img-container shadow1">
-      <div class="x-button" data-name=${pokemon.name}>
-        <img src="./assets/images/x-15.png">
+    <div class="poke-card-container">
+      <div class="poke-img-container shadow1">
+        <div class="x-button" data-name=${pokemon.name}>
+          <img src="./assets/images/x-15.png">
+      </div>        
+          <img class="poke-img" src=${pokemon.imgSrc} data-audio=${pokemon.cry}>
       </div>
-        <img class="poke-img" src=${pokemon.imgSrc} data-audio=${pokemon.cry}>
-    </div>
-    <button class="dark-blue shadow1">${pokemon.name}</button>
-    <button class="mid-blue shadow1">About</button>
-  </div> 
+      <button class="dark-blue shadow1">${pokemon.name}</button>
+      <button class="mid-blue shadow1">About</button>
+    </div> 
   `)
 
   $('#poke-grid').prepend(pokeCard);
