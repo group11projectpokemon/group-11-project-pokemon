@@ -24,17 +24,6 @@ submitNewPokemon.addEventListener('click', function() {
   }
 });
 
-// set the image of the pokemon
-function setImage(pokeData) {  
-  if (pokeData.seat == 0 || pokeData.seat == 1) {
-    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrc);
-  } else {
-    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrcBack);
-  }
-  // set the audio of the pokemon
-  $(`#slot${pokeData.seat}`).attr('data-audio', pokeData.cry);
-}
-
 // fetch the pokemon data from the api
 function fetchPoke(pokemonName, pokemonSeat) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
@@ -45,7 +34,8 @@ function fetchPoke(pokemonName, pokemonSeat) {
     console.log(data);
     // create the pokemon object
     let pokemon = {
-      name : pokemonName,
+      //capitalize the first letter of the pokemon name
+      name : pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1),
       imgSrc : (data.sprites.front_default),
       imgSrcBack : (data.sprites.back_default),
       cry : data.cries.latest,
@@ -55,6 +45,19 @@ function fetchPoke(pokemonName, pokemonSeat) {
     localStorage.setItem(`poke${pokemonSeat}`, JSON.stringify(pokemon));
     setImage(pokemon);
   })
+}
+
+// set the image of the pokemon
+function setImage(pokeData) {  
+  if (pokeData.seat == 0 || pokeData.seat == 1) {
+    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrc);
+  } else {
+    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrcBack);
+  }
+  // set the audio of the pokemon
+  $(`#slot${pokeData.seat}`).attr('data-audio', pokeData.cry);
+  // set the name of the pokemon
+  $(`#slot${pokeData.seat}`).attr('data-name', pokeData.name);
 }
 
 
