@@ -166,7 +166,6 @@ button {
 .camp {
   width: 100%;
   max-width: 1200px;
-  /* position: absolute; */
   z-index: -100;
 }
 
@@ -176,11 +175,13 @@ button {
   /* remove this border color later */
   /* border: 2px solid red; */
   position: absolute;
+  transition: rotate 0.1s;
+  animation-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 .slot img {
-  width: 100%
-}
+  width: 100%;
+  }
 
 #slot0 {
   translate: 86% -182%;
@@ -205,3 +206,4 @@ button {
   rotate: -2deg;
   z-index: 100;
 }
+
