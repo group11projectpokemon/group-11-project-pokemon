@@ -1,6 +1,6 @@
 // Get the chuck norris joke from the API
 function fetchChuckNorris()     {
-    fetch('https://api.chucknorris.io/jokes/random')
+    fetch('https://api.chucknorris.io/jokes/random?category=dev')
     .then(response => {
         return response.json();
     })
