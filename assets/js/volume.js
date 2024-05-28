@@ -1,5 +1,5 @@
 // play pokemon cry on click
-$(document).on('click', '.poke-img', function() {
+$(document).on('click', '.slot', function() {
     let audioSrc = this.dataset.audio;
     let audio = new Audio(audioSrc);
 

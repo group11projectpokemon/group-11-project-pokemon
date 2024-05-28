@@ -107,6 +107,16 @@ button {
   /* margin: 40px; */
 }
 
+/* radio button grid styles */
+#radio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 200px;
+  margin: auto;
+  margin-top: 50px;
+}
+
 /* Add new pokemon button styles */
 #add-new {
   background-color: #00000086;
