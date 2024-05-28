@@ -164,7 +164,7 @@ button {
   width: 25%;
   aspect-ratio: 1/1;
   /* remove this border color later */
-  /* border: 2px solid red; */
+  border: 2px solid red;
   position: absolute;
 }
 
@@ -195,3 +195,4 @@ button {
   rotate: -2deg;
   z-index: 100;
 }
+
