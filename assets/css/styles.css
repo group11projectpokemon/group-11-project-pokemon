@@ -1,7 +1,7 @@
 :root {
   --light: #ffffff;
   --dark: #000000;
-  --blue1: #e8f5fa;
+  --blue1: #163b3f;
   /* --blue2: #b7e2ed;
   --blue3: #8cc5e9;
   --green: #8cc63f;
@@ -116,7 +116,7 @@ button {
 }
 
 /* Add new pokemon button styles */
-#add-new {
+#add-new, .music-player {
   background-color: #00000086;
   color: var(--light);
   font-weight: 500;
@@ -126,6 +126,10 @@ button {
   display: flex;
   align-items: center;
   position: absolute;
+  
+}
+
+#add-new {
   top: 0;
 }
 
@@ -137,14 +141,20 @@ button {
   background-color: rgb(201, 201, 201);
 }
 
-.plus-button {
+#playButton:hover, #nextButton:hover {
+  background-color: rgb(201, 201, 201);
+  cursor: pointer;
+}
+
+.plus-button, #playButton, #nextButton{
   background-color: var(--light);
   border-radius: 100%;
   margin-right: 10px;
   width: 30px;
+  height: 30px;
 }
 
-.plus-button img {
+.plus-button img, #playButton img, #nextButton img {
   width: 100%;
 }
 

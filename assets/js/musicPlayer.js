@@ -17,10 +17,12 @@ $(document).ready(function() {
     $('#playButton').click(function() {
         if (audio.paused) {
             audio.play();
-            $('#playButton').html('Pause');
+            // $('#playButton').html('Pause');
+            $('#play-pause-icon').attr("src", "./assets/images/pause.png")
         } else {
             audio.pause();
-            $('#playButton').html('Play');
+            // $('#playButton').html('Play');
+            $('#play-pause-icon').attr("src", "./assets/images/play.png")
         }
     });
 
