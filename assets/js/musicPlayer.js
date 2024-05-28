@@ -39,4 +39,14 @@ $(document).ready(function() {
         audio.volume = $(this).val();
     });
     
+// loop audio
+    audio.addEventListener('ended', function() {
+        currentTrack++;
+        if (currentTrack >= tracks.length) {
+            currentTrack = 0;
+        }
+        audio.src = tracks[currentTrack];
+        audio.play();
+    });
+
 });
