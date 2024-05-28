@@ -17,12 +17,12 @@ $(document).ready(function() {
     $('#playButton').click(function() {
         if (audio.paused) {
             audio.play();
-            // $('#playButton').html('Pause');
             $('#play-pause-icon').attr("src", "./assets/images/pause.png")
+            $('#play-pause-icon').attr("alt", "pause")
         } else {
             audio.pause();
-            // $('#playButton').html('Play');
             $('#play-pause-icon').attr("src", "./assets/images/play.png")
+            $('#play-pause-icon').attr("alt", "play")
         }
     });
 

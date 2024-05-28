@@ -1,7 +1,7 @@
 :root {
   --light: #ffffff;
   --dark: #000000;
-  --blue1: #163b3f;
+  --blue1: #e8f5fa;
   /* --blue2: #b7e2ed;
   --blue3: #8cc5e9;
   --green: #8cc63f;
@@ -115,22 +115,23 @@ button {
   margin-top: 50px;
 }
 
-/* Add new pokemon button styles */
+/* Toolbar button styles */
 #add-new, .music-player {
   background-color: #00000086;
   color: var(--light);
   font-weight: 500;
-  margin: 16px;
+  margin-right: 16px;
   padding: 10px;
   border-radius: 40px;
   display: flex;
-  align-items: center;
-  position: absolute;
-  
+  align-items: center; 
 }
 
-#add-new {
+.toolbar {
+  position: absolute;
   top: 0;
+  margin: 16px;
+  display: flex;
 }
 
 #add-new:hover {
