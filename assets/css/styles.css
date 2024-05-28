@@ -2,11 +2,11 @@
   --light: #ffffff;
   --dark: #000000;
   --blue1: #e8f5fa;
-  --blue2: #b7e2ed;
+  /* --blue2: #b7e2ed;
   --blue3: #8cc5e9;
   --green: #8cc63f;
   --red: #f28585;
-  --orange: #fcb721;
+  --orange: #fcb721; */
   --light-gray: #e6e6e6;
   --dark-gray: #909090;
 }
@@ -42,7 +42,7 @@ button {
   margin: 3px 0;
 }
 
-.dark-blue {
+/* .dark-blue {
   background-color: var(--blue3);
 }
 
@@ -66,14 +66,13 @@ button {
 
 .poke-img-container {
   background-color: var(--light);
-  /* height: 200px; */
   border-radius: 20px;
   margin-bottom: 3px;
   display: flex;
   justify-content: flex-end;
-}
+} */
 
-.x-button {
+/* .x-button {
   height: 30px;
   width: 30px;
   border-radius: 100%;
@@ -92,10 +91,10 @@ button {
 .poke-img-container img {
   width: 200px;
 
-}
+} */
 
 /* Pokemon roster grid styles */
-#poke-grid {
+/* #poke-grid {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 30px 26px;
@@ -104,8 +103,7 @@ button {
 .roster-section {
   display: flex;
   justify-content: center;
-  /* margin: 40px; */
-}
+} */
 
 /* radio button grid styles */
 #radio-grid {
@@ -129,11 +127,6 @@ button {
   align-items: center;
   position: absolute;
   top: 0;
-}
-
-#add-new p {
-  /* margin has to be set to 0 cause of bootstrap <p> */
-  margin: 0;
 }
 
 #add-new:hover {
@@ -166,21 +159,20 @@ button {
 .camp {
   width: 100%;
   max-width: 1200px;
-  /* position: absolute; */
   z-index: -100;
 }
 
 .slot {
   width: 25%;
   aspect-ratio: 1/1;
-  /* remove this border color later */
-  /* border: 2px solid red; */
   position: absolute;
+  transition: rotate 0.1s;
+  animation-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 .slot img {
-  width: 100%
-}
+  width: 100%;
+  }
 
 #slot0 {
   translate: 86% -182%;
@@ -195,7 +187,6 @@ button {
 
 #slot2 {
   translate: 98% -125%;
-  transform: scaleX(-1);
   rotate: 2deg;
   z-index: 100;
 }
@@ -204,4 +195,6 @@ button {
   translate: 202% -125%;
   rotate: -2deg;
   z-index: 100;
+  transform: scaleX(-1);
 }
+
