@@ -21,4 +21,18 @@ const wiggle = function() {
   }
 };
 
-setInterval(wiggle, 1000);
+const playButton = document.getElementById('playButton');
+let goStop = "stop";
+
+playButton.addEventListener('click', function (){
+  if (goStop == "stop") {
+    goStop = "go";
+    setInterval(wiggle, 1000);
+    console.log("go");
+  } else {
+    direction = "right"
+    goStop = "stop";
+    clearInterval(wiggle);
+    console.log("stop");
+  }
+});
