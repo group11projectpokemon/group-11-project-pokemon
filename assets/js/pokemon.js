@@ -57,9 +57,16 @@ function setImage(pokeData) {
     $(`#slot${pokeData.seat}`).append($(`<img src='${pokeData.imgSrcBack}'></img>`))
   }
   // set the audio of the pokemon
-  $(`#slot${pokeData.seat}`).attr('data-audio', pokeData.cry);
+  $(`#slot${pokeData.seat}`).attr('data-cry', pokeData.cry);
   // set the name of the pokemon
   $(`#slot${pokeData.seat}`).attr('data-name', pokeData.name);
+  // set the seat of the pokemon
+  $(`#slot${pokeData.seat}`).attr('data-seat', pokeData.seat);
+
+  //if seat is 0 or 3 change the image direction
+  if (pokeData.seat == 0 || pokeData.seat == 3) {
+    $(`#slot${pokeData.seat} img`).css('transform', 'scaleX(-1)');
+  };
 }
 
 
