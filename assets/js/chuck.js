@@ -2,7 +2,7 @@
 let isTyping = false;
 
 function fetchChuckNorris(pokemonName)     {
-    fetch('https://api.chucknorris.io/jokes/random?category=food')
+    fetch('https://api.chucknorris.io/jokes/random?category=dev')
     .then(response => {
         return response.json();
     })
