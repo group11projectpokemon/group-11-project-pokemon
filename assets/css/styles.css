@@ -196,7 +196,6 @@ button {
 
 #slot0 {
   translate: 86% -182%;
-  transform: scaleX(-1);
   rotate: -8deg;
 }
 
@@ -215,6 +214,5 @@ button {
   translate: 202% -125%;
   rotate: -2deg;
   z-index: 100;
-  transform: scaleX(-1);
 }
 

@@ -50,16 +50,21 @@ function fetchPoke(pokemonName, pokemonSeat) {
 // set the image of the pokemon
 function setImage(pokeData) {  
   if (pokeData.seat == 0 || pokeData.seat == 1) {
-    // $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrc);
-    $(`#slot${pokeData.seat}`).append($(`<img src='${pokeData.imgSrc}'></img>`))
+    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrc);
   } else {
-    // $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrcBack);
-    $(`#slot${pokeData.seat}`).append($(`<img src='${pokeData.imgSrcBack}'></img>`))
+    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrcBack);
   }
   // set the audio of the pokemon
-  $(`#slot${pokeData.seat}`).attr('data-audio', pokeData.cry);
+  $(`#slot${pokeData.seat}`).attr('data-cry', pokeData.cry);
   // set the name of the pokemon
   $(`#slot${pokeData.seat}`).attr('data-name', pokeData.name);
+  // set the seat of the pokemon
+  $(`#slot${pokeData.seat}`).attr('data-seat', pokeData.seat);
+
+  //if seat is 0 or 3 change the image direction
+  if (pokeData.seat == 0 || pokeData.seat == 3) {
+    $(`#slot${pokeData.seat} img`).css('transform', 'scaleX(-1)');
+  };
 }
 
 
