@@ -160,3 +160,35 @@ header p {
   rotate: -2deg;
   z-index: 100;
 }
+
+/* Footer styles */
+footer {
+  background-color: var(--light);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h5 {
+  margin-bottom: 26px;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 8px 20px;
+  background-color: var(--blue3);
+  color: var(--light);
+  font-weight: 500;
+  margin: 4px;
+  border-radius: 40px;
+}
+
+footer a:hover {
+  background-color: var(--blue2);
+}
+
+.creators {
+  display: flex;
+  flex-wrap: wrap;
+}
