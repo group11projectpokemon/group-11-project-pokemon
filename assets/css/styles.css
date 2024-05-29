@@ -74,12 +74,13 @@ header p {
 }
 
 /* Toolbar button styles */
-#add-new, .music-player {
+#add-new, .music-player, .volume-container {
   background-color: var(--blue3);
   color: var(--light);
   font-weight: 500;
   margin-right: 16px;
   padding: 10px;
+  padding-right: 16px;
   border-radius: 40px;
   display: flex;
   align-items: center; 
@@ -92,7 +93,7 @@ header p {
   justify-content: center;
 }
 
-.plus-button, #playButton, #nextButton {
+.plus-button, #playButton, #nextButton, #volumeButton {
   background-color: var(--light);
   border-radius: 100%;
   margin-right: 10px;
@@ -100,12 +101,13 @@ header p {
   height: 30px;
 }
 
-#playButton:hover, #nextButton:hover, #add-new:hover .plus-button {
+#playButton:hover, #nextButton:hover, #add-new:hover .plus-button, .volume-container:hover #volume-icon {
   background-color: var(--blue2);
   cursor: pointer;
+  border-radius: 100%;
 }
 
-.plus-button img, #playButton img, #nextButton img {
+.plus-button img, #playButton img, #nextButton img, #volumeButton img {
   width: 100%;
 }
 
