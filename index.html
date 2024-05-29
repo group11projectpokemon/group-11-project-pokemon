@@ -16,33 +16,34 @@
   <header class="shadow1">
     <h1>PokéLounge</h1>
     <p>Add up to 6 pokemon to your lounge and generate entertainment recommendations based on their combined qualities</p>
-    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" aria-label="volume control">
   </header>
+  <!-- toolbar under the header for choosing pokemon and music -->
+  <div class="toolbar shadow1">
+    <!-- Choose Pokemon button -->
+    <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <div class="plus-button">
+        <img src="./assets/images/+.png" alt="description here">
+      </div>
+      Choose Pokémon
+    </div>
+
+    <!-- background music player -->
+    <div class="music-player">     
+      <audio id="backgroundMusic"></audio>
+      <div id="playButton" class="music-button" aria-label="play music">
+        <img id="play-pause-icon" src="./assets/images/play.png"  alt=""></div>
+      <div id="nextButton" class="music-button" aria-label="next song">
+        <img id="scip-icon" src="./assets/images/skip.png" alt="">
+      </div>
+      Music by: "Lopo Bunny"
+    </div>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" aria-label="volume control">
+  </div>
 
   <!-- Main campfire -->
   <div class="camp-container">
     <img src="./assets/images/campfire.webp" class="camp" alt="description here">
-
-    <div class="toolbar">
-      <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <div class="plus-button">
-          <img src="./assets/images/+.png" alt="description here">
-        </div>
-        Choose Pokémon
-      </div>
-
-      <!-- background music player -->
-      <div class="music-player">     
-        <audio id="backgroundMusic"></audio>
-        <div id="playButton" class="music-button" aria-label="play music">
-          <img id="play-pause-icon" src="./assets/images/play.png"  alt=""></div>
-        <div id="nextButton" class="music-button" aria-label="next song">
-          <img id="scip-icon" src="./assets/images/skip.png" alt="">
-        </div>
-        Music by: "Lopo Bunny"
-      </div>
-    </div>
-
+    
     <div id="slot0" class="slot" data-cry="" data-name="" data-seat="0">
       <img src="" alt="">
     </div>

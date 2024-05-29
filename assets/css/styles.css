@@ -2,11 +2,11 @@
   --light: #ffffff;
   --dark: #000000;
   --blue1: #e8f5fa;
-  /* --blue2: #b7e2ed;
+  --blue2: #b7e2ed;
   --blue3: #8cc5e9;
   --green: #8cc63f;
   --red: #f28585;
-  --orange: #fcb721; */
+  --orange: #fcb721;
   --light-gray: #e6e6e6;
   --dark-gray: #909090;
 }
@@ -75,7 +75,7 @@ header p {
 
 /* Toolbar button styles */
 #add-new, .music-player {
-  background-color: #00000086;
+  background-color: var(--blue3);
   color: var(--light);
   font-weight: 500;
   margin-right: 16px;
@@ -86,31 +86,23 @@ header p {
 }
 
 .toolbar {
-  position: absolute;
-  top: 0;
-  margin: 16px;
+  background-color: var(--light);
+  padding: 16px;
   display: flex;
+  justify-content: center;
 }
 
-#add-new:hover {
-  cursor: pointer;
-}
-
-#add-new:hover .plus-button {
-  background-color: rgb(201, 201, 201);
-}
-
-#playButton:hover, #nextButton:hover {
-  background-color: rgb(201, 201, 201);
-  cursor: pointer;
-}
-
-.plus-button, #playButton, #nextButton{
+.plus-button, #playButton, #nextButton {
   background-color: var(--light);
   border-radius: 100%;
   margin-right: 10px;
   width: 30px;
   height: 30px;
+}
+
+#playButton:hover, #nextButton:hover, #add-new:hover .plus-button {
+  background-color: var(--blue2);
+  cursor: pointer;
 }
 
 .plus-button img, #playButton img, #nextButton img {
