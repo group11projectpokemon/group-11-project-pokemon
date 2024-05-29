@@ -1,11 +1,14 @@
 // Get the chuck norris joke from the API
+let isTyping = false;
+
 function fetchChuckNorris(pokemonName)     {
     fetch('https://api.chucknorris.io/jokes/random?category=food')
     .then(response => {
         return response.json();
     })
-    // Display the joke on the page with a typewriter effect
     .then(function (data) {
+        if (isTyping) return;
+        isTyping = true;
         $('#chuck').empty();
         // Replace the word "Chuck Norris" or "Chuck" with the pokemon name
         data.value = data.value.replace(/Chuck Norris/g, pokemonName);
@@ -19,6 +22,7 @@ function fetchChuckNorris(pokemonName)     {
                 i++;
             } else {
                 clearInterval(interval);
+                isTyping = false;                
             }
         }, 50);
     })
