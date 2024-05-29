@@ -21,6 +21,11 @@ $(document).ready(function() {
             // Swap the images
             setImage(incoming);
             setImage(receiving);
+
+            // checks for empty log and removes the image
+            if (receiving ==  0 || receiving == 1 || receiving == 2 || receiving == 3) {
+                $(`#slot${incomingName} img`).attr('src', "");
+            }
         }
     });
 

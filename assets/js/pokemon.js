@@ -6,6 +6,13 @@ let poke0 = JSON.parse(localStorage.getItem("poke0")) || [];
 let poke1 = JSON.parse(localStorage.getItem("poke1")) || [];
 let poke2 = JSON.parse(localStorage.getItem("poke2")) || [];
 let poke3 = JSON.parse(localStorage.getItem("poke3")) || [];
+
+// set local storage to the pokemon objects
+localStorage.setItem("poke0", JSON.stringify(poke0));
+localStorage.setItem("poke1", JSON.stringify(poke1));
+localStorage.setItem("poke2", JSON.stringify(poke2));
+localStorage.setItem("poke3", JSON.stringify(poke3));
+
 // set the image of the pokemon on page load
 setImage(poke0);
 setImage(poke1);
