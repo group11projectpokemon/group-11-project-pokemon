@@ -50,11 +50,9 @@ function fetchPoke(pokemonName, pokemonSeat) {
 // set the image of the pokemon
 function setImage(pokeData) {  
   if (pokeData.seat == 0 || pokeData.seat == 1) {
-    // $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrc);
-    $(`#slot${pokeData.seat}`).append($(`<img src='${pokeData.imgSrc}'></img>`))
+    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrc);
   } else {
-    // $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrcBack);
-    $(`#slot${pokeData.seat}`).append($(`<img src='${pokeData.imgSrcBack}'></img>`))
+    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrcBack);
   }
   // set the audio of the pokemon
   $(`#slot${pokeData.seat}`).attr('data-cry', pokeData.cry);
