@@ -132,7 +132,7 @@ header p {
 }
 
 .slot {
-  width: 25%;
+  width: 22%;
   aspect-ratio: 1/1;
   position: absolute;
   border: 1px solid red;
@@ -146,23 +146,23 @@ header p {
 }
 
 #slot0 {
-  translate: 86% -182%;
+  translate: 104% -194%;
   rotate: -8deg;
 }
 
 #slot1 {
-  translate: 214% -182%;
+  translate: 250% -194%;
   rotate: 8deg;
 }
 
 #slot2 {
-  translate: 98% -125%;
+  translate: 115% -135%;
   rotate: 2deg;
   z-index: 100;
 }
 
 #slot3 {
-  translate: 202% -125%;
+  translate: 240% -135%;
   rotate: -2deg;
   z-index: 100;
 }
