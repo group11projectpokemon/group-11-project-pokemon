@@ -105,6 +105,13 @@ button {
   justify-content: center;
 } */
 
+
+/* Modal Styles */
+.fireImg {
+  width: 300px;
+}
+
+
 /* radio button grid styles */
 #radio-grid {
   display: grid;
@@ -177,6 +184,8 @@ button {
   width: 25%;
   aspect-ratio: 1/1;
   position: absolute;
+  border: 1px solid red;
+  border-radius: 100%;
   transition: rotate 0.1s;
   animation-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
