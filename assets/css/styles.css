@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body, html {
     font-family: Arial, sans-serif; /* Sets the font for the entire page */
     margin: 0;
@@ -40,3 +41,216 @@ header {
     display: block; /* Makes the text appear on a new line below the image */
     margin-top: 10px; /* Space above the name */
 }
+=======
+:root {
+  --light: #ffffff;
+  --dark: #000000;
+  --blue1: #e8f5fa;
+  /* --blue2: #b7e2ed;
+  --blue3: #8cc5e9;
+  --green: #8cc63f;
+  --red: #f28585;
+  --orange: #fcb721; */
+  --light-gray: #e6e6e6;
+  --dark-gray: #909090;
+}
+
+/* general styles */
+body {
+  background-color: var(--blue1);
+}
+
+.shadow1 {
+  box-shadow: 0 0 5px #51515115;
+}
+
+/* header styles */
+header {
+  background-color: var(--light);
+  display: flex;
+  padding: 20px 5%;
+  align-items: center;
+}
+
+header p {
+  width: 300px;
+  margin: 0 3%;
+}
+
+/* pokemon roster section styles */
+/* styles for a single pokemon card */
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 6px;
+  margin: 3px 0;
+}
+
+/* .dark-blue {
+  background-color: var(--blue3);
+}
+
+.dark-blue:hover {
+  background-color: #78b6dc;
+}
+
+.mid-blue {
+  background-color: var(--blue2);
+}
+
+.mid-blue:hover {
+  background-color: #9ed0dd;
+}
+
+.poke-card-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.poke-img-container {
+  background-color: var(--light);
+  border-radius: 20px;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: flex-end;
+} */
+
+/* .x-button {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: var(--light-gray);
+  position: absolute;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.x-button:hover {
+  background-color: rgb(201, 201, 201);
+  cursor: pointer;
+}
+.poke-img-container img {
+  width: 200px;
+
+} */
+
+/* Pokemon roster grid styles */
+/* #poke-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px 26px;
+}
+
+.roster-section {
+  display: flex;
+  justify-content: center;
+} */
+
+/* radio button grid styles */
+#radio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 200px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Toolbar button styles */
+#add-new, .music-player {
+  background-color: #00000086;
+  color: var(--light);
+  font-weight: 500;
+  margin-right: 16px;
+  padding: 10px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center; 
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  margin: 16px;
+  display: flex;
+}
+
+#add-new:hover {
+  cursor: pointer;
+}
+
+#add-new:hover .plus-button {
+  background-color: rgb(201, 201, 201);
+}
+
+#playButton:hover, #nextButton:hover {
+  background-color: rgb(201, 201, 201);
+  cursor: pointer;
+}
+
+.plus-button, #playButton, #nextButton{
+  background-color: var(--light);
+  border-radius: 100%;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.plus-button img, #playButton img, #nextButton img {
+  width: 100%;
+}
+
+/* New campfire section styles */
+.camp-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative
+}
+
+.camp {
+  width: 100%;
+  max-width: 1200px;
+  z-index: -100;
+}
+
+.slot {
+  width: 25%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transition: rotate 0.1s;
+  animation-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.slot img {
+  width: 100%;
+  }
+
+#slot0 {
+  translate: 86% -182%;
+  transform: scaleX(-1);
+  rotate: -8deg;
+}
+
+#slot1 {
+  translate: 214% -182%;
+  rotate: 8deg;
+}
+
+#slot2 {
+  translate: 98% -125%;
+  rotate: 2deg;
+  z-index: 100;
+}
+
+#slot3 {
+  translate: 202% -125%;
+  rotate: -2deg;
+  z-index: 100;
+  transform: scaleX(-1);
+}
+
+>>>>>>> eec0d9b72738ffe28f9fd1dd7dc464555220a89a
