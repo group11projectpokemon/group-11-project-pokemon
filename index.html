@@ -84,38 +84,40 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">title</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <p>Search for a Pokemon</p>
         <div class="input-group mb-3 ui-front">
-          <p>Search for a Pokemon</p><br>
           <input id="pokelist" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          
         </div>
-        <div id="poke-roster"></div>
-      </div>
-      <p>Where will they sit?</p>
-      <img class="fireImg" src="./assets/images/fire.png">
-      
-      <div id="radio-grid">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioButtons" value="0">
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioButtons" value="1">
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioButtons" value="2">
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="radioButtons" value="3">
+        <p>Where will they sit?</p>
+        <img class="fireImg" src="./assets/images/fire.png">   
+        <div id="radio-grid">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtons" value="0" id="btn0">
+            <label for="btn0">Log A</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtons" value="1" id="btn1">
+            <label for="btn1">Log B</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtons" value="2" id="btn2">
+            <label for="btn2">Log C</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtons" value="3" id="btn3">
+            <label for="btn3">Log D</label>
+          </div>
         </div>
       </div>
 
+
       <div class="modal-footer">
-        <button id="submit-new-pokemon" >Add</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button id="submit-new-pokemon" class="btn btn-primary" data-bs-dismiss="modal">Add to Scene</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

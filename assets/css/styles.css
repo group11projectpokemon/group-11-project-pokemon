@@ -35,12 +35,12 @@ header p {
 
 /* pokemon roster section styles */
 /* styles for a single pokemon card */
-button {
+/* button {
   border-radius: 20px;
   border: none;
   padding: 6px;
   margin: 3px 0;
-}
+} */
 
 /* .dark-blue {
   background-color: var(--blue3);
@@ -107,8 +107,29 @@ button {
 
 
 /* Modal Styles */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-body p {
+  font-size: 18px;
+}
+
+.form-check input {
+  margin-right: -18px;
+}
+
+#pokelist {
+  margin: 0 60px 20px;
+}
+
 .fireImg {
-  width: 300px;
+  width: 260px;
+  /* align-self: center; */
+  position: absolute;
+  bottom: 55px;
 }
 
 
@@ -116,10 +137,15 @@ button {
 #radio-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  max-width: 200px;
-  margin: auto;
-  margin-top: 50px;
+  gap: 140px;
+  z-index: 100;
+}
+
+.form-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Toolbar button styles */
