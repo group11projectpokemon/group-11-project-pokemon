@@ -103,6 +103,10 @@ header p {
   cursor: pointer;
 }
 
+#add-container:hover {
+  background-color: var(--green);
+}
+
 .icon-container {
   background-color: var(--light);
   border-radius: 100%;
@@ -111,7 +115,7 @@ header p {
   height: 30px;
 }
 
-.icon-container:hover, #add-new:hover .icon-container, .volume-container:hover .icon-container {
+.icon-container:hover, #add-container:hover .icon-container, .volume-container:hover .icon-container {
   background-color: var(--blue2);
   cursor: pointer;
   border-radius: 100%;
@@ -124,6 +128,11 @@ header p {
 /* Class is added to #pokeball when pokemon is dragged over it */
 .pokeball-hover {
   background-color: var(--green);
+}
+
+/* class is applied or removed to make return to pokeball/choose pokemon buttons hide or show with drag functions */
+.hidden {
+  display: none;
 }
 
 /* Campfire section styles ----------------------*/
