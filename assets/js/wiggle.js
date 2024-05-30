@@ -25,16 +25,13 @@ const playButton = document.getElementById('playButton');
 let goStop = "stop";
 let wiggleTimer;
 
-
 playButton.addEventListener('click', function (){
   if (goStop == "stop") {
     goStop = "go";
     wiggleTimer = setInterval(wiggle, 1000);
-    console.log("go");
   } else {
     direction = "right"
     goStop = "stop";
     clearInterval(wiggleTimer);
-    console.log("stop");
   }
 });
