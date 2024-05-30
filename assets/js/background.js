@@ -33,6 +33,9 @@ function moveDivs1() {
     $('#slot2').css({"translate": "265% -180%", "rotate": "14deg"});
     $('#slot3').css({"translate": "340% -160%", "rotate": "14deg"});
 
+    $('#slot1 img').css('transform', 'scaleX(-1)');
+    $('#slot3 img').css('transform', 'none');
+
     // this obs doesn't work cause it can't read pokeData from the pokemon.js
     // $('#slot2 img').attr('src', pokeData.imgSrc);
 }
@@ -44,6 +47,9 @@ function moveDivs0() {
     $('#slot1').css({"translate": "250% -194%", "rotate": "8deg"});
     $('#slot2').css({"translate": "115% -135%", "rotate": "2deg"});
     $('#slot3').css({"translate": "240% -135%", "rotate": "-2deg"});
+
+    $('#slot1 img').css('transform', 'none');
+    $('#slot3 img').css('transform', 'scaleX(-1)');
 }
 
 function moveDivs() {
@@ -55,5 +61,3 @@ function moveDivs() {
         console.log('moveDivs error')
     }
 }
-
-// $(`.camp-container > img`).attr(`src`, backgrounds[currentBackground]);
