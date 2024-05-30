@@ -99,6 +99,10 @@ header p {
   align-items: center; 
 }
 
+.tool-container:hover {
+  cursor: pointer;
+}
+
 .icon-container {
   background-color: var(--light);
   border-radius: 100%;
@@ -115,6 +119,11 @@ header p {
 
 .icon-container img {
   width: 100%;
+}
+
+/* Class is added to #pokeball when pokemon is dragged over it */
+.pokeball-hover {
+  background-color: var(--green);
 }
 
 /* Campfire section styles ----------------------*/
