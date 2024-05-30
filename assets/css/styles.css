@@ -46,6 +46,11 @@ header p {
 
 #pokelist {
   margin: 0 60px 20px;
+  z-index: 200;
+}
+
+.drop {
+  z-index: 200;
 }
 
 .fireImg {
