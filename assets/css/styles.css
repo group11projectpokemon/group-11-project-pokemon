@@ -134,8 +134,8 @@ header p {
   width: 22%;
   aspect-ratio: 1/1;
   position: absolute;
-  border: 1px solid red;
-  border-radius: 100%;
+  border: 3px solid red;
+  /* border-radius: 100%; */
   transition: rotate 0.1s;
   animation-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
