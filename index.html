@@ -17,44 +17,43 @@
     <p>Add up to 6 pokemon to your lounge and generate entertainment recommendations based on their combined qualities</p>
   </header>
   <!-- toolbar under the header for choosing pokemon and music -->
-  <div class="toolbar shadow1">
+  <div id="add-container" class="toolbar shadow1">
     <!-- Choose Pokemon button -->
-    <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      <div class="plus-button">
+    <div id="add-new" class="shadow1 tool-container" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <div class="icon-container">
         <img src="./assets/images/+.png" alt="description here">
       </div>
       Choose Pokémon
     </div>
 
+    <!-- just gotta be big enough to be nice to use -->
+    <div id="pokeball" class="tool-container">
+      Return to Pokéball
+    </div>
+
     <!-- background music player -->
-    <div class="music-player">     
+    <div class="tool-container">     
       <audio id="backgroundMusic"></audio>
-      <div id="playButton" class="music-button" aria-label="play music">
+      <div id="playButton" class="icon-container" aria-label="play music">
         <img id="play-pause-icon" src="./assets/images/play.png"  alt=""></div>
-      <div id="nextButton" class="music-button" aria-label="next song">
+      <div id="nextButton" class="icon-container" aria-label="next song">
         <img id="scip-icon" src="./assets/images/skip.png" alt="">
       </div>
       Music by: "Lopo Bunny"
     </div>
 
     <!-- Volume control -->
-    <div class="volume-container">
-      <div id="volumeButton">
+    <div class="tool-container volume-container">
+      <div class="icon-container">
         <img id="volume-icon" src="./assets/images/volume.png"  alt="">
       </div>
       <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" aria-label="volume control">
     </div>
 
     <!-- PLEASE STYLE ME -->
-    <div id="toggleBackground">
-      Toggle
+    <div id="toggleBackground" class="tool-container">
+      Change Scene
     </div>
-
-    <!-- just gotta be big enough to be nice to use -->
-    <div id="pokeball">
-      Return to Pokéball
-    </div>
-
 
   </div>
 

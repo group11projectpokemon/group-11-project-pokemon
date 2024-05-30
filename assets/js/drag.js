@@ -35,10 +35,21 @@ $(document).ready(function() {
     });
 
     $(`#pokeball`).droppable({
+        tolerance: 'intersect',
+        over: function(event, ui) {
+            // add class to style the pokeball when hovered
+            $('#pokeball').addClass('pokeball-hover')
+        },
+        out: function(event, ui) {
+            // remove class after moved off
+            $('#pokeball').removeClass('pokeball-hover')
+        },
         drop: function(event, ui) {
             let seatRemove = ui.draggable.parent().attr('data-seat');
             $(`#slot${seatRemove} img`).attr('src', "");
             localStorage.setItem(`poke${seatRemove}`, JSON.stringify([]));
+            // remove class after dropped
+            $('#pokeball').removeClass('pokeball-hover')
         }
     });
 
