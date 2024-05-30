@@ -32,17 +32,26 @@ $(document).ready(function() {
     $('.slot img').draggable({
         revert: 'invalid',
         helper: 'clone',
+        drag: function(event, ui) {
+            $('#pokeball').removeClass('hidden');
+            $('#add-container').addClass('hidden');
+        },
+        stop: function(event, ui) {
+            $('#pokeball').addClass('hidden')
+            $('#add-container').removeClass('hidden');
+        }
     });
 
     $(`#pokeball`).droppable({
         tolerance: 'intersect',
         over: function(event, ui) {
             // add class to style the pokeball when hovered
-            $('#pokeball').addClass('pokeball-hover')
+            $('#pokeball').addClass('pokeball-hover');
         },
         out: function(event, ui) {
             // remove class after moved off
             $('#pokeball').removeClass('pokeball-hover')
+            
         },
         drop: function(event, ui) {
             let seatRemove = ui.draggable.parent().attr('data-seat');

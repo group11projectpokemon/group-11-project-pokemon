@@ -130,6 +130,11 @@ header p {
   background-color: var(--green);
 }
 
+/* class is applied or removed to make return to pokeball/choose pokemon buttons hide or show with drag functions */
+.hidden {
+  display: none;
+}
+
 /* Campfire section styles ----------------------*/
 .camp-container {
   width: 100%;
