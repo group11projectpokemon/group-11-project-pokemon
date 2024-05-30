@@ -29,6 +29,7 @@ submitNewPokemon.addEventListener('click', function() {
   if (pokemonName != "" && pokeSeat != "") {
     fetchPoke(pokemonName, pokeSeat);
   }
+  pokemonInput.value = "";
 });
 
 // fetch the pokemon data from the api
@@ -90,8 +91,5 @@ function setImage(pokeData) {
   // set the name of the pokemon
   $(`#slot${pokeData.seat}`).attr('data-name', pokeData.name);
   // set the seat of the pokemon
-  $(`#slot${pokeData.seat}`).attr('data-seat', pokeData.seat);
-
-  //if seat is 0 or 3 change the image direction  
-  
+  $(`#slot${pokeData.seat}`).attr('data-seat', pokeData.seat); 
 }
