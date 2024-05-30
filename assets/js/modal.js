@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fetch("https://pokeapi.co/api/v2/pokemon?limit=1302")
 .then((response) => response.json())
 .then((data) => {
@@ -15,3 +16,20 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=1302")
 
 // const modalbutton = document.getElementById('modalbutton');
 // modalbutton.addEventListener('click', getPokemon);
+=======
+// Autocomplete for the search bar
+fetch("https://pokeapi.co/api/v2/pokemon?limit=1302")
+  .then((response) => response.json())
+  .then((data) => {
+    const names = data.results.map(object => object.name)
+    $(function() {
+      $( "#pokelist" ).autocomplete({
+        source: function(request, response) {
+          let results = $.ui.autocomplete.filter(names, request.term);
+    
+        response(results.slice(0, 10));
+        }
+      });
+    });
+  });
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185

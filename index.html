@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PokéLounge</title>
+<<<<<<< HEAD
   <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+=======
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
@@ -13,6 +16,7 @@
   <link rel="stylesheet" href="./assets/css/chuck.css">
 </head>
 <body>
+<<<<<<< HEAD
   
 
   <header class="shadow1">
@@ -79,16 +83,86 @@
       </div> -->
     </div>
   </section>
+=======
+  <header class="shadow1">
+    <h1>PokéLounge</h1>
+    <p>Add up to 6 pokemon to your lounge and generate entertainment recommendations based on their combined qualities</p>
+  </header>
+  <!-- toolbar under the header for choosing pokemon and music -->
+  <div class="toolbar shadow1">
+    <!-- Choose Pokemon button -->
+    <div id="add-container" class="shadow1 tool-container" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <div class="icon-container">
+        <img src="./assets/images/pokeball.png" alt="description here">
+      </div>
+      Choose Pokémon
+    </div>
+
+    <!-- just gotta be big enough to be nice to use -->
+    <div id="pokeball" class="tool-container hidden">
+      <div class="icon-container">
+        <img src="./assets/images/pokeball.png" alt="description here">
+      </div>
+      Return to Pokéball
+    </div>
+
+    <!-- background music player -->
+    <div class="tool-container">     
+      <audio id="backgroundMusic"></audio>
+      <div id="playButton" class="icon-container" aria-label="play music">
+        <img id="play-pause-icon" src="./assets/images/play.png"  alt=""></div>
+      <div id="nextButton" class="icon-container" aria-label="next song">
+        <img id="scip-icon" src="./assets/images/skip.png" alt="">
+      </div>
+      Music by: "Lopo Bunny"
+    </div>
+
+    <!-- Volume control -->
+    <div class="tool-container volume-container">
+      <div class="icon-container">
+        <img id="volume-icon" src="./assets/images/volume.png"  alt="">
+      </div>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" aria-label="volume control">
+    </div>
+
+    <!-- PLEASE STYLE ME -->
+    <div id="toggleBackground" class="tool-container">
+      Change Scene
+    </div>
+
+  </div>
+
+  <!-- Main campfire -->
+  <div class="camp-container shadow1">
+    <!-- I'm temporarily changing the image so I can work on the lounge easier -->
+    <img src="./assets/images/campfire.webp" class="camp" alt="description here">
+    <!-- <img src="./assets/images/lounge2.png" class="camp" alt="description here"> -->
+    
+    <div id="slot0" class="slot" data-cry="" data-name="" data-seat="0">
+      <img src="" alt="">
+    </div>
+    <div id="slot1" class="slot" data-cry="" data-name="" data-seat="1">
+      <img src="" alt="">
+    </div>
+    <div id="slot2" class="slot" data-cry="" data-name="" data-seat="2">
+      <img src="" alt="">
+    </div>
+    <div id="slot3" class="slot" data-cry="" data-name="" data-seat="3">
+      <img src="" alt="">
+    </div>
+  </div>
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">title</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
         <div class="input-group mb-3 ui-front">
           <input id="pokelist" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           <button id="submit-new-pokemon" >Add</button>
@@ -108,16 +182,43 @@
         </div>
         <div class="form-check">
             <input class="form-check-input" type="radio" name="radioButtons" value="3">
+=======
+        <p>Search for a Pokemon</p>
+        <div class="input-group mb-3 ui-front drop">
+          <input id="pokelist" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <p>Where will they sit?</p>
+        <img class="fireImg" src="./assets/images/fire.png">   
+        <div id="radio-grid">
+          <div class="form-check">
+            <input class="btn-check" type="radio" name="radioButtons" value="0" id="btn0" checked>
+            <label class="btn btn-outline-primary" for="btn0">Seat A</label>
+          </div>
+          <div class="form-check">
+            <input class="btn-check" type="radio" name="radioButtons" value="1" id="btn1">
+            <label class="btn btn-outline-primary" for="btn1">Seat B</label>
+          </div>
+          <div class="form-check">
+            <input class="btn-check" type="radio" name="radioButtons" value="2" id="btn2">
+            <label class="btn btn-outline-primary" for="btn2">Seat C</label>
+          </div>
+          <div class="form-check">
+            <input class="btn-check" type="radio" name="radioButtons" value="3" id="btn3">
+            <label class="btn btn-outline-primary" for="btn3">Seat D</label>
+          </div>
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
         </div>
       </div>
 
       <div class="modal-footer">
+        <button id="submit-new-pokemon" class="btn btn-primary" data-bs-dismiss="modal">Add to Scene</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
 
+<<<<<<< HEAD
 <div id="chuck"></div>
 
 <footer>
@@ -126,17 +227,39 @@
 
 <!-- <canvas id="myChart"></canvas> -->
 
+=======
+<div class="chuck-container shadow1">
+  <div id="chuck"></div>
+</div>
+
+<footer>
+  <h5>Created by:</h5>
+  <div class="creators">
+    <a href="https://github.com/hannahschwen">Hannah Schwen</a>
+    <a href="https://github.com/swokamoto">Scott Okamoto</a>
+    <a href="https://github.com/nubsu">Domingo Ornelas</a>
+    <a href="https://github.com/spd34">Sean Drake</a>
+    <a href="https://github.com/Mayenawdk">Mayena Wardak</a>
+  </div>
+</footer>
+
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="./assets/js/pokemon.js"></script>
-  <script src ="./assets/js/recommendations.js"></script>
   <script src = "./assets/js/modal.js"></script>
   <script src = "./assets/js/volume.js"></script>
   <script src = "./assets/js/chuck.js"></script>
   <script src = "./assets/js/musicPlayer.js"></script>
+<<<<<<< HEAD
   <script src = "./assets/js/quoteInterval.js"></script>
   <script src = "./assets/js/wiggle.js"></script>
   <!-- <script src="./assets/js/chart.js"></script> -->
+=======
+  <script src = "./assets/js/drag.js"></script>
+  <script src = "./assets/js/divs-wiggle-background.js"></script>
+
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
 </body>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Needs to be worked on */
 #chuck {
     border-radius: 10px;
@@ -13,3 +14,22 @@
     margin-right: auto;
     box-shadow: 0 0 10px var(--dark);
 }
+=======
+.chuck-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5px;
+    background-color: var(--light);
+}
+
+#chuck {
+    min-height: 105px;
+    padding: 10px;
+    color: var(--dark);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    border: 30px solid transparent;
+    border-image: url(../images/border-img.png) 30% stretch;
+}
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185

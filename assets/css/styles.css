@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 body, html {
     font-family: Arial, sans-serif; /* Sets the font for the entire page */
     margin: 0;
@@ -42,26 +43,44 @@ header {
     margin-top: 10px; /* Space above the name */
 }
 =======
+=======
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
 :root {
   --light: #ffffff;
   --dark: #000000;
   --blue1: #e8f5fa;
+<<<<<<< HEAD
   /* --blue2: #b7e2ed;
   --blue3: #8cc5e9;
   --green: #8cc63f;
   --red: #f28585;
   --orange: #fcb721; */
+=======
+  --blue2: #b7e2ed;
+  --blue3: #8cc5e9;
+  --green: #8cc63f;
+  --red: #f28585;
+  --orange: #fcb721;
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   --light-gray: #e6e6e6;
   --dark-gray: #909090;
 }
 
+<<<<<<< HEAD
 /* general styles */
+=======
+/* general styles ----------------------*/
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
 body {
   background-color: var(--blue1);
 }
 
 .shadow1 {
+<<<<<<< HEAD
   box-shadow: 0 0 5px #51515115;
+=======
+  box-shadow: 0 0 5px #51515126;
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
 }
 
 /* header styles */
@@ -77,6 +96,7 @@ header p {
   margin: 0 3%;
 }
 
+<<<<<<< HEAD
 /* pokemon roster section styles */
 /* styles for a single pokemon card */
 button {
@@ -166,11 +186,75 @@ button {
   font-weight: 500;
   margin-right: 16px;
   padding: 10px;
+=======
+/* Modal Styles ----------------------*/
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-body p {
+  font-size: 18px;
+}
+
+#pokelist {
+  margin: 0 60px 20px;
+  z-index: 200;
+}
+
+.drop {
+  z-index: 200;
+}
+
+.fireImg {
+  width: 260px;
+  position: absolute;
+  bottom: 55px;
+}
+
+/* radio button grid styles ----------------------*/
+#radio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 140px;
+  z-index: 100;
+}
+
+.form-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.form-check input {
+  margin-right: -18px;
+}
+
+/* Toolbar button styles ----------------------*/
+.toolbar {
+  background-color: var(--light);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tool-container {
+  background-color: var(--blue3);
+  color: var(--light);
+  font-weight: 500;
+  margin: 8px;
+  padding: 10px;
+  padding-right: 16px;
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   border-radius: 40px;
   display: flex;
   align-items: center; 
 }
 
+<<<<<<< HEAD
 .toolbar {
   position: absolute;
   top: 0;
@@ -192,6 +276,17 @@ button {
 }
 
 .plus-button, #playButton, #nextButton{
+=======
+.tool-container:hover {
+  cursor: pointer;
+}
+
+#add-container:hover {
+  background-color: var(--green);
+}
+
+.icon-container {
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   background-color: var(--light);
   border-radius: 100%;
   margin-right: 10px;
@@ -199,11 +294,35 @@ button {
   height: 30px;
 }
 
+<<<<<<< HEAD
 .plus-button img, #playButton img, #nextButton img {
   width: 100%;
 }
 
 /* New campfire section styles */
+=======
+.icon-container:hover, #add-container:hover .icon-container, .volume-container:hover .icon-container {
+  background-color: var(--blue2);
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.icon-container img {
+  width: 100%;
+}
+
+/* Class is added to #pokeball when pokemon is dragged over it */
+.pokeball-hover {
+  background-color: var(--green);
+}
+
+/* class is applied or removed to make return to pokeball/choose pokemon buttons hide or show with drag functions */
+.hidden {
+  display: none;
+}
+
+/* Campfire section styles ----------------------*/
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
 .camp-container {
   width: 100%;
   max-width: 1200px;
@@ -218,15 +337,24 @@ button {
 }
 
 .slot {
+<<<<<<< HEAD
   width: 25%;
   aspect-ratio: 1/1;
   position: absolute;
+=======
+  width: 22%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  /* border: 3px solid red; */
+  border-radius: 100%;
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   transition: rotate 0.1s;
   animation-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 .slot img {
   width: 100%;
+<<<<<<< HEAD
   }
 
 #slot0 {
@@ -254,3 +382,38 @@ button {
 }
 
 >>>>>>> eec0d9b72738ffe28f9fd1dd7dc464555220a89a
+=======
+}
+
+/* Footer styles ----------------------*/
+footer {
+  /* background-color: var(--light); */
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h5 {
+  margin-bottom: 26px;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 8px 20px;
+  background-color: var(--blue3);
+  color: var(--light);
+  font-weight: 500;
+  margin: 4px;
+  border-radius: 40px;
+}
+
+footer a:hover {
+  background-color: var(--blue2);
+}
+
+.creators {
+  display: flex;
+  flex-wrap: wrap;
+}
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
