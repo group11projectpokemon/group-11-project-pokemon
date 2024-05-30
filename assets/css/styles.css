@@ -17,7 +17,7 @@ body {
 }
 
 .shadow1 {
-  box-shadow: 0 0 5px #51515115;
+  box-shadow: 0 0 5px #51515126;
 }
 
 /* header styles */
@@ -163,7 +163,7 @@ header p {
 
 /* Footer styles */
 footer {
-  background-color: var(--light);
+  /* background-color: var(--light); */
   padding: 60px;
   display: flex;
   flex-direction: column;

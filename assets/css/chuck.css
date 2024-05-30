@@ -1,17 +1,17 @@
-/* Needs to be worked on */
-#chuck {
-    border-radius: 10px;
-    padding: 10px;
-    background-color: var(--dark-gray);
-    color: var(--light-gray);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1em;
-    text-align: left;
-    margin: 10px;
+.chuck-container {
     width: 100%;
     max-width: 1200px;
-    min-height: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px var(--dark);
+    margin: auto;
+    padding: 5px;
+    background-color: var(--light);
+}
+
+#chuck {
+    min-height: 105px;
+    padding: 10px;
+    color: var(--dark);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    border: 30px solid transparent;
+    border-image: url(../images/border-img.png) 30% stretch;
 }
