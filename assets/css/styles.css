@@ -11,7 +11,7 @@
   --dark-gray: #909090;
 }
 
-/* general styles */
+/* general styles ----------------------*/
 body {
   background-color: var(--blue1);
 }
@@ -33,7 +33,7 @@ header p {
   margin: 0 3%;
 }
 
-/* Modal Styles */
+/* Modal Styles ----------------------*/
 .modal-body {
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ header p {
   bottom: 55px;
 }
 
-/* radio button grid styles */
+/* radio button grid styles ----------------------*/
 #radio-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -78,12 +78,20 @@ header p {
   margin-right: -18px;
 }
 
-/* Toolbar button styles */
-#add-new, .music-player, .volume-container {
+/* Toolbar button styles ----------------------*/
+.toolbar {
+  background-color: var(--light);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tool-container {
   background-color: var(--blue3);
   color: var(--light);
   font-weight: 500;
-  margin-right: 16px;
+  margin: 8px;
   padding: 10px;
   padding-right: 16px;
   border-radius: 40px;
@@ -91,14 +99,7 @@ header p {
   align-items: center; 
 }
 
-.toolbar {
-  background-color: var(--light);
-  padding: 16px;
-  display: flex;
-  justify-content: center;
-}
-
-.plus-button, #playButton, #nextButton, #volumeButton {
+.icon-container {
   background-color: var(--light);
   border-radius: 100%;
   margin-right: 10px;
@@ -106,17 +107,17 @@ header p {
   height: 30px;
 }
 
-#playButton:hover, #nextButton:hover, #add-new:hover .plus-button, .volume-container:hover #volume-icon {
+.icon-container:hover, #add-new:hover .icon-container, .volume-container:hover .icon-container {
   background-color: var(--blue2);
   cursor: pointer;
   border-radius: 100%;
 }
 
-.plus-button img, #playButton img, #nextButton img, #volumeButton img {
+.icon-container img {
   width: 100%;
 }
 
-/* Campfire section styles */
+/* Campfire section styles ----------------------*/
 .camp-container {
   width: 100%;
   max-width: 1200px;
@@ -134,8 +135,8 @@ header p {
   width: 22%;
   aspect-ratio: 1/1;
   position: absolute;
-  border: 3px solid red;
-  /* border-radius: 100%; */
+  /* border: 3px solid red; */
+  border-radius: 100%;
   transition: rotate 0.1s;
   animation-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
@@ -144,29 +145,7 @@ header p {
   width: 100%;
 }
 
-#slot0 {
-  translate: 104% -194%;
-  rotate: -8deg;
-}
-
-#slot1 {
-  translate: 250% -194%;
-  rotate: 8deg;
-}
-
-#slot2 {
-  translate: 115% -135%;
-  rotate: 2deg;
-  z-index: 100;
-}
-
-#slot3 {
-  translate: 240% -135%;
-  rotate: -2deg;
-  z-index: 100;
-}
-
-/* Footer styles */
+/* Footer styles ----------------------*/
 footer {
   /* background-color: var(--light); */
   padding: 60px;
