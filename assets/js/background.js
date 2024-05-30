@@ -14,6 +14,12 @@ $(`#toggleBackground`).click(function() {
     }
     $(`.camp-container > img`).attr(`src`, backgrounds[currentBackground]);
     moveDivs();
+
+    // not an elegant solution, but it works
+    setImage(JSON.parse(localStorage.getItem("poke0")));
+    setImage(JSON.parse(localStorage.getItem("poke1")));
+    setImage(JSON.parse(localStorage.getItem("poke2")));
+    setImage(JSON.parse(localStorage.getItem("poke3")));
 });
 
 
@@ -32,12 +38,6 @@ function moveDivs1() {
     $('#slot1').css({"translate": "165% -180%", "rotate": "-14deg"});
     $('#slot2').css({"translate": "265% -180%", "rotate": "14deg"});
     $('#slot3').css({"translate": "340% -160%", "rotate": "14deg"});
-
-    $('#slot1 img').css('transform', 'scaleX(-1)');
-    $('#slot3 img').css('transform', 'none');
-
-    // this obs doesn't work cause it can't read pokeData from the pokemon.js
-    // $('#slot2 img').attr('src', pokeData.imgSrc);
 }
 
 function moveDivs0() {
@@ -47,9 +47,6 @@ function moveDivs0() {
     $('#slot1').css({"translate": "250% -194%", "rotate": "8deg"});
     $('#slot2').css({"translate": "115% -135%", "rotate": "2deg"});
     $('#slot3').css({"translate": "240% -135%", "rotate": "-2deg"});
-
-    $('#slot1 img').css('transform', 'none');
-    $('#slot3 img').css('transform', 'scaleX(-1)');
 }
 
 function moveDivs() {
