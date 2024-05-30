@@ -14,6 +14,12 @@ $(`#toggleBackground`).click(function() {
   $(`.camp-container > img`).attr(`src`, backgrounds[currentBackground]);
   // sets div locations and initial rotate
   moveDivs();
+
+  // not an elegant solution, but it works
+  setImage(JSON.parse(localStorage.getItem("poke0")));
+  setImage(JSON.parse(localStorage.getItem("poke1")));
+  setImage(JSON.parse(localStorage.getItem("poke2")));
+  setImage(JSON.parse(localStorage.getItem("poke3")));
 });
 
 // declare initial rotate, which will be set by moveDivs and used by wiggle
