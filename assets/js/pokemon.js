@@ -54,12 +54,37 @@ function fetchPoke(pokemonName, pokemonSeat) {
 }
 
 // set the image of the pokemon
+// sets either front or back image of the pokemon and the direction of the image
 function setImage(pokeData) {  
-  if (pokeData.seat == 0 || pokeData.seat == 1) {
+  
+  //if campfire background is selected  
+  if ($(`.camp-container > img`).attr('src') == './assets/images/campfire.webp') {     
+    if (pokeData.seat == 0 || pokeData.seat == 1) {
+      $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrc);
+    } else {
+      $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrcBack);
+    }
+
+    //remove the flip effect on the 4 slots
+    $(`#slot${pokeData.seat} img`).css('transform', 'none');
+
+    if (pokeData.seat == 0 || pokeData.seat == 3) {
+      $(`#slot${pokeData.seat} img`).css('transform', 'scaleX(-1)');
+    };
+
+  } 
+  
+  if ($(`.camp-container > img`).attr('src') == './assets/images/lounge2.png') {
     $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrc);
-  } else {
-    $(`#slot${pokeData.seat} img`).attr('src', pokeData.imgSrcBack);
-  }
+    
+    $(`#slot${pokeData.seat} img`).css('transform', 'none');
+
+    if (pokeData.seat == 1 || pokeData.seat == 0) {
+      $(`#slot${pokeData.seat} img`).css('transform', 'scaleX(-1)');
+    };
+
+  };
+  
   // set the audio of the pokemon
   $(`#slot${pokeData.seat}`).attr('data-cry', pokeData.cry);
   // set the name of the pokemon
@@ -67,8 +92,6 @@ function setImage(pokeData) {
   // set the seat of the pokemon
   $(`#slot${pokeData.seat}`).attr('data-seat', pokeData.seat);
 
-  //if seat is 0 or 3 change the image direction
-  if (pokeData.seat == 0 || pokeData.seat == 3) {
-    $(`#slot${pokeData.seat} img`).css('transform', 'scaleX(-1)');
-  };
+  //if seat is 0 or 3 change the image direction  
+  
 }

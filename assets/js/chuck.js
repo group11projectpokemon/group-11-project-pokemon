@@ -13,7 +13,7 @@ function fetchChuckNorris(pokemonName)     {
         // Replace the word "Chuck Norris" or "Chuck" with the pokemon name
         data.value = data.value.replace(/Chuck Norris/g, pokemonName);
         data.value = data.value.replace(/Chuck/g, pokemonName);
-        data.value = data.value.replace(/Norris/g, "Ash");
+        data.value = data.value.replace(/Norris/g, pokemonName);
         let chuck = data.value.split('');
         let i = 0;
         let interval = setInterval(function() {
