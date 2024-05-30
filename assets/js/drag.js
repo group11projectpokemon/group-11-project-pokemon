@@ -33,4 +33,14 @@ $(document).ready(function() {
         revert: 'invalid',
         helper: 'clone',
     });
+
+    $(`#pokeball`).droppable({
+        drop: function(event, ui) {
+            let seatRemove = ui.draggable.parent().attr('data-seat');
+            $(`#slot${seatRemove} img`).attr('src', "");
+            localStorage.setItem(`poke${seatRemove}`, JSON.stringify([]));
+        }
+    });
+
+
 });
