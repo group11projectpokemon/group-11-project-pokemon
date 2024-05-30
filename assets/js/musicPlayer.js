@@ -10,10 +10,10 @@ $(document).ready(function() {
     // 02 Pokemon B2/W2 - Pinwheel/Dreamyard Forest LoFi Remix
     // 03 Pokemon B2/W2 - Skyarrow Bridge LoFi Remix
 
-// default audio track
+    // default audio track
     let audio = new Audio(tracks[currentTrack]);
 
-// click event for play button to toggle play/pause
+    // click event for play button to toggle play/pause
     $('#playButton').click(function() {
         if (audio.paused) {
             audio.play();
@@ -26,7 +26,7 @@ $(document).ready(function() {
         }
     });
 
-// click event for next button
+    // click event for next button
     $('#nextButton').click(function() {
         currentTrack++;
         if (currentTrack >= tracks.length) {
@@ -36,12 +36,12 @@ $(document).ready(function() {
         audio.play();
     });
 
-// control volume
-    $('#volumeControl').change(function() {
+    // volume control
+    $('#volumeControl').on('input', function() {
         audio.volume = $(this).val();
     });
     
-// loop audio
+    // loop audio
     audio.addEventListener('ended', function() {
         currentTrack++;
         if (currentTrack >= tracks.length) {
