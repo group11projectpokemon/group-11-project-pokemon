@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PokéLounge</title>
+<<<<<<< HEAD
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+=======
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
@@ -12,6 +16,74 @@
   <link rel="stylesheet" href="./assets/css/chuck.css">
 </head>
 <body>
+<<<<<<< HEAD
+  
+
+  <header class="shadow1">
+    <h1>PokéLounge</h1>
+    <p>Add up to 6 pokemon to your lounge and generate entertainment recommendations based on their combined qualities</p>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" aria-label="volume control">
+
+    <!-- background music player -->
+    <audio id="backgroundMusic"></audio>
+
+
+
+  </header>
+
+  <!-- This is a new idea for a background, with positioned div's for the pokemon -->
+  <div class="camp-container">
+    <img src="./assets/images/campfire.webp" class="camp" alt="description here">
+
+    <div class="toolbar">
+      <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="plus-button">
+          <img src="./assets/images/+.png" alt="description here">
+        </div>
+        Choose Pokémon
+      </div>
+
+      <div class="music-player">
+        <div id="playButton" class="music-button" aria-label="play music">
+          <img id="play-pause-icon" src="./assets/images/play.png"></div>
+        <div id="nextButton" class="music-button" aria-label="next song">
+          <img id="scip-icon" src="./assets/images/skip.png">
+        </div>
+        Music by: "Lopo Bunny"
+      </div>
+    </div>
+
+    <!-- the images inside the div's are here temporarily, but will be added with JavaScript from the API -->
+    <div id="slot0" class="slot" data-audio="" data-name="">
+      <img src="" alt="description here">
+    </div>
+    <div id="slot1" class="slot" data-audio="" data-name="">
+      <img src="" alt="description here">
+    </div>
+    <div id="slot2" class="slot" data-audio="" data-name="">
+      <img src="" alt="description here">
+    </div>
+    <div id="slot3" class="slot" data-audio="" data-name="">
+      <img src="" alt="description here">
+    </div>
+
+  </div>
+
+  <!-- section with the pokemon roster -->
+  <section class="roster-section">
+    <!-- container for the pokemon grid -->
+    <div id="poke-grid">
+      <!-- cards will append here after being created with js -->
+
+      <!-- card to add a new pokemon -->
+      <!-- <div id="add-new" class="shadow1" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="plus-button">
+          <img src="./assets/images/+.png">
+        </div>
+      </div> -->
+    </div>
+  </section>
+=======
   <header class="shadow1">
     <h1>PokéLounge</h1>
     <p>Add up to 6 pokemon to your lounge and generate entertainment recommendations based on their combined qualities</p>
@@ -79,6 +151,7 @@
       <img src="" alt="">
     </div>
   </div>
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -89,6 +162,27 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
+        <div class="input-group mb-3 ui-front">
+          <input id="pokelist" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <button id="submit-new-pokemon" >Add</button>
+        </div>
+        <div id="poke-roster"></div>
+      </div>
+      
+      <div id="radio-grid">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtons" value="0">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtons" value="1">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtons" value="2">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioButtons" value="3">
+=======
         <p>Search for a Pokemon</p>
         <div class="input-group mb-3 ui-front drop">
           <input id="pokelist" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
@@ -112,6 +206,7 @@
             <input class="btn-check" type="radio" name="radioButtons" value="3" id="btn3">
             <label class="btn btn-outline-primary" for="btn3">Seat D</label>
           </div>
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
         </div>
       </div>
 
@@ -123,6 +218,16 @@
   </div>
 </div>
 
+<<<<<<< HEAD
+<div id="chuck"></div>
+
+<footer>
+  <p>Created by Group 11</p>
+</footer>
+
+<!-- <canvas id="myChart"></canvas> -->
+
+=======
 <div class="chuck-container shadow1">
   <div id="chuck"></div>
 </div>
@@ -138,6 +243,7 @@
   </div>
 </footer>
 
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -146,8 +252,14 @@
   <script src = "./assets/js/volume.js"></script>
   <script src = "./assets/js/chuck.js"></script>
   <script src = "./assets/js/musicPlayer.js"></script>
+<<<<<<< HEAD
+  <script src = "./assets/js/quoteInterval.js"></script>
+  <script src = "./assets/js/wiggle.js"></script>
+  <!-- <script src="./assets/js/chart.js"></script> -->
+=======
   <script src = "./assets/js/drag.js"></script>
   <script src = "./assets/js/divs-wiggle-background.js"></script>
 
+>>>>>>> 5367fe308634af20873209c98aba3d6645be8185
 </body>
 </html>
