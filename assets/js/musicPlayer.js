@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     // default audio track
     let audio = new Audio(tracks[currentTrack]);
+    $('#volumeControl').attr('value', localStorage.getItem('volume')||.5)
 
     // click event for play button to toggle play/pause
     $('#playButton').click(function() {
@@ -39,6 +40,7 @@ $(document).ready(function() {
     // volume control
     $('#volumeControl').on('input', function() {
         audio.volume = $(this).val();
+        localStorage.setItem('volume', audio.volume)
     });
     
     // loop audio
