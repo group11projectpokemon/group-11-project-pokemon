@@ -1,0 +1,63 @@
+header {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(45deg, #ff6347, #1e90ff, #32cd32, #ff1493, #ffd700); /* Vibrant gradient background */
+    background-size: 600% 600%;
+    animation: gradientBG 16s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 24px; /* Larger text for emphasis */
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.header {
+
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;     /* Center vertically */
+        height: 100px;           /* Adjust this value to match your design preference */
+        background: linear-gradient(45deg, #ff6347, #1e90ff, #32cd32);
+        width: 100%;             /* Ensures the header takes full width of the viewport */
+        color: white;
+        text-align: center;
+        padding: 0;              /* Removes any default padding */
+        box-sizing: border-box;  /* Include padding and borders in the element's dimensions */
+    }
+    
+
+.logo {
+    width: 80px; /* Larger logo for more visibility */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes gradientBG {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 50px #ff0080, 0 0 60px #ff0080, 0 0 70px #ff0080, 0 0 80px #ff0080;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 18px;
+    }
+    .header-content p {
+        font-size: 10px;
+    }
+}
