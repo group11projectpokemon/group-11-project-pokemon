@@ -123,15 +123,12 @@ header p {
   width: 100%;
 }
 
-/* Class is added to #pokeball when pokemon is dragged over it */
+/* #pokeball when pokemon is dragged over it */
 .pokeball-hover {
   background-color: var(--green);
 }
 
-/* class is applied or removed to make return to pokeball/choose pokemon buttons hide or show with drag functions */
-.hidden {
-  display: none;
-}
+
 
 /* Campfire section styles ----------------------*/
 .camp-container {
@@ -151,7 +148,6 @@ header p {
   width: 22%;
   aspect-ratio: 1/1;
   position: absolute;
-  /* border: 3px solid red; */
   border-radius: 100%;
   transition: rotate 0.1s;
   animation-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
@@ -161,17 +157,28 @@ header p {
   width: 100%;
 }
 
-#pokeB  {
+.droppable-pokeball {
   position: absolute;
-  bottom: 3em;
-  right: 3em;
+  bottom: 1em;
+  left: 0;
   width: 12vw;
+  height: 12vw;
+}
+
+#pokeB {
+  width: 12vw;
+  height: 12vw;
+  display: flex;
   }
 
 #pokeB.over {
   animation: spin 2s linear infinite;
 }
 
+/* for the remove #pokeB */
+.hidden {
+  opacity: 0;
+}
 
 /* Footer styles ----------------------*/
 footer {
