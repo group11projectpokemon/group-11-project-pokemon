@@ -29,10 +29,8 @@ header {
 }
 
 header p {
-  width: 300px;
-  margin: 0 3%;
+  text-align: left;
 }
-
 /* Modal Styles ----------------------*/
 .modal-body {
   display: flex;
