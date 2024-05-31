@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-/* Needs to be worked on */
-#chuck {
-    border-radius: 10px;
-    padding: 10px;
-    background-color: var(--dark-gray);
-    color: var(--light-gray);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1em;
-    text-align: left;
-    margin: 10px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px var(--dark);
-}
-=======
 .chuck-container {
     width: 100%;
     max-width: 1200px;
@@ -32,4 +15,3 @@
     border: 30px solid transparent;
     border-image: url(../images/border-img.png) 30% stretch;
 }
->>>>>>> 5367fe308634af20873209c98aba3d6645be8185
