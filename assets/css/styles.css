@@ -161,6 +161,18 @@ header p {
   width: 100%;
 }
 
+#pokeB  {
+  position: absolute;
+  bottom: 3em;
+  right: 3em;
+  width: 12vw;
+  }
+
+#pokeB.over {
+  animation: spin 2s linear infinite;
+}
+
+
 /* Footer styles ----------------------*/
 footer {
   /* background-color: var(--light); */

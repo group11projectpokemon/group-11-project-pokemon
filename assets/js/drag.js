@@ -33,32 +33,27 @@ $(document).ready(function() {
         revert: 'invalid',
         helper: 'clone',
         drag: function(event, ui) {
-            $('#pokeball').removeClass('hidden');
-            $('#add-container').addClass('hidden');
+            $('.droppable').removeClass('hidden');
         },
         stop: function(event, ui) {
-            $('#pokeball').addClass('hidden')
-            $('#add-container').removeClass('hidden');
+            $('.droppable').addClass('hidden');
         }
     });
 
-    $(`#pokeball`).droppable({
+    // return pokemon (remove it)
+    $(`#pokeB`).droppable({
         tolerance: 'intersect',
         over: function(event, ui) {
-            // add class to style the pokeball when hovered
-            $('#pokeball').addClass('pokeball-hover');
+            $('.droppable').addClass('over')
         },
         out: function(event, ui) {
-            // remove class after moved off
-            $('#pokeball').removeClass('pokeball-hover')
-            
+            $('.droppable').removeClass('over')    
         },
         drop: function(event, ui) {
             let seatRemove = ui.draggable.parent().attr('data-seat');
             $(`#slot${seatRemove} img`).attr('src', "");
             localStorage.setItem(`poke${seatRemove}`, JSON.stringify([]));
-            // remove class after dropped
-            $('#pokeball').removeClass('pokeball-hover')
+            $('.droppable').removeClass('over')
         }
     });
 
