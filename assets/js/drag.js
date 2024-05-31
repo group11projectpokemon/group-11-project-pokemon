@@ -33,10 +33,11 @@ $(document).ready(function() {
         revert: 'invalid',
         helper: 'clone',
         drag: function(event, ui) {
-            $('.droppable').removeClass('hidden');
+            // show the trash can with display flex, then hide it when the image is dropped
+            $('#pokeB').removeClass('hidden');
         },
         stop: function(event, ui) {
-            $('.droppable').addClass('hidden');
+            $('#pokeB').addClass('hidden');
         }
     });
 
@@ -44,16 +45,16 @@ $(document).ready(function() {
     $(`#pokeB`).droppable({
         tolerance: 'intersect',
         over: function(event, ui) {
-            $('.droppable').addClass('over')
+            $('#pokeB').addClass('over');    
         },
         out: function(event, ui) {
-            $('.droppable').removeClass('over')    
+            $('#pokeB').removeClass('over');    
         },
         drop: function(event, ui) {
             let seatRemove = ui.draggable.parent().attr('data-seat');
             $(`#slot${seatRemove} img`).attr('src', "");
             localStorage.setItem(`poke${seatRemove}`, JSON.stringify([]));
-            $('.droppable').removeClass('over')
+            $('#pokeB').removeClass('over');
         }
     });
 
