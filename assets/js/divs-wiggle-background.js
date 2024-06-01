@@ -37,15 +37,11 @@ function setInitialRotate() {
 
 // set locations and rotate for camp background
 function moveDivs0() {
-  console.log('move 0');
   $('.slot').css("width", "22%")
   $('#slot0').css({"translate": "104% -194%"});
   $('#slot1').css({"translate": "250% -194%"});
   $('#slot2').css({"translate": "115% -135%"});
   $('#slot3').css({"translate": "240% -135%"});
-
-  $('#slot1 img').css('transform', 'none');
-  $('#slot3 img').css('transform', 'scaleX(-1)');
 
   initialRotate0 = -6; // -6 to -10 center -8
   initialRotate1 = 10; // 10 to 6 center 8
@@ -60,15 +56,11 @@ function moveDivs0() {
 
 // set locations and rotate for lounge background
 function moveDivs1() {
-  console.log('move 1');
   $('.slot').css("width", "20%")
   $('#slot0').css({"translate": "90% -160%"});
   $('#slot1').css({"translate": "165% -180%"});
   $('#slot2').css({"translate": "265% -180%"});
   $('#slot3').css({"translate": "340% -160%"});
-
-  $('#slot1 img').css('transform', 'scaleX(-1)');
-  $('#slot3 img').css('transform', 'none');
 
   initialRotate0 = -12; // -12 to -16 center -14
   initialRotate1 = -12; // same
