@@ -29,18 +29,30 @@ $(document).ready(function() {
         }
     });
 
+    // variables used to get the roate value and seat value
+    let seat;
+    let initialRotate;
+
     $('.slot img').draggable({
         revert: 'invalid',
         helper: 'clone',
-        
+        start: function(event, ui) {
+            seat = $(this).parent().data('seat'); // assuming the 'seat' data attribute is on the draggable element
+            initialRotate = eval(`initialRotate${seat}`);
+          },
         drag: function(event, ui) {
             // show the return pokeball when dragging, hide the image
             $('#pokeB').removeClass('hidden');
-            $(this).addClass('hidden');
+            $(this).addClass('hidden');;
+            // counter rotate the slot
+            $(`#slot${seat}`).css('transform', `rotate(${-initialRotate}deg)`);
+
         },
         stop: function(event, ui) {
             $('#pokeB').addClass('hidden');
-            $(this).removeClass('hidden');
+            $(this).removeClass('hidden');;
+            // return the slot to its original rotation
+            $(`#slot${seat}`).css('transform', `rotate(${initialRotate}deg)`);
         }
     });
 
