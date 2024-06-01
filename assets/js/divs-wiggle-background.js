@@ -15,7 +15,6 @@ $(`#toggleBackground`).click(function() {
   // sets div locations and initial rotate
   moveDivs();
 
-  // not an elegant solution, but it works
   setImage(JSON.parse(localStorage.getItem("poke0")));
   setImage(JSON.parse(localStorage.getItem("poke1")));
   setImage(JSON.parse(localStorage.getItem("poke2")));
