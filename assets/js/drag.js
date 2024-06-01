@@ -32,12 +32,15 @@ $(document).ready(function() {
     $('.slot img').draggable({
         revert: 'invalid',
         helper: 'clone',
+        
         drag: function(event, ui) {
-            // show the trash can with display flex, then hide it when the image is dropped
+            // show the return pokeball when dragging, hide the image
             $('#pokeB').removeClass('hidden');
+            $(this).addClass('hidden');
         },
         stop: function(event, ui) {
             $('#pokeB').addClass('hidden');
+            $(this).removeClass('hidden');
         }
     });
 
