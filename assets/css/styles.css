@@ -43,6 +43,7 @@ a:hover {
 }
 
 .drop {
+  /* keep the dropdown above the buttons */
   z-index: 200;
 }
 
@@ -52,23 +53,12 @@ a:hover {
   bottom: 55px;
 }
 
-/* radio button grid styles ----------------------*/
+/* seat button grid styles ----------------------*/
 #radio-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 140px;
   z-index: 100;
-}
-
-.form-check {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.form-check input {
-  margin-right: -18px;
 }
 
 /* Toolbar button styles ----------------------*/
@@ -128,7 +118,7 @@ a:hover {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  position: relative
+  position: relative;
 }
 
 .camp {
@@ -138,7 +128,6 @@ a:hover {
 }
 
 .slot {
-  width: 22%;
   aspect-ratio: 1/1;
   position: absolute;
   border-radius: 100%;
@@ -150,6 +139,7 @@ a:hover {
   width: 100%;
 }
 
+/* styles for pokeball to send pokemon back  */
 .droppable-pokeball {
   position: absolute;
   bottom: 1em;
@@ -175,7 +165,6 @@ a:hover {
 
 /* Footer styles ----------------------*/
 footer {
-  /* background-color: var(--light); */
   padding: 60px;
   display: flex;
   flex-direction: column;
