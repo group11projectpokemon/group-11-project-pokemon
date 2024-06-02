@@ -19,7 +19,7 @@
     <div class="header-content">
         <img src="assets/images/pokeball2.png" alt="Pokéball" class="logo"> <!-- Update image source -->
         <h1>PokéLounge</h1>
-        <p>Add up to 6 Pokémon to your lounge and generate entertainment recommendations based on their combined qualities</p>
+        <p>Add up to 4 Pokémon to your scene, turn on some lofi, and enjoy the vibes</p>
     </div>
 </header>
   <!-- toolbar under the header for choosing pokemon and music -->
@@ -27,42 +27,34 @@
     <!-- Choose Pokemon button -->
     <div id="add-container" class="shadow1 tool-container" id="modalbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <div class="icon-container">
-        <img src="./assets/images/pokeball.png" alt="description here">
+        <img src="./assets/images/pokeball2.png" alt="Pokéball">
       </div>
       Choose Pokémon
-    </div>
-
-    <!-- just gotta be big enough to be nice to use --->
-    <div id="pokeball" class="tool-container hidden">
-      <div class="icon-container">
-        <img src="./assets/images/pokeball.png" alt="description here">
-      </div>
-      Return to Pokéball
     </div>
 
     <!-- background music player -->
     <div class="tool-container">     
       <audio id="backgroundMusic"></audio>
       <div id="playButton" class="icon-container" aria-label="play music">
-        <img id="play-pause-icon" src="./assets/images/play.png"  alt=""></div>
+        <img id="play-pause-icon" src="./assets/images/play.png" alt="play/pause"></div>
       <div id="nextButton" class="icon-container" aria-label="next song">
-        <img id="scip-icon" src="./assets/images/skip.png" alt="">
+        <img id="skip-icon" src="./assets/images/skip.png" alt="skip">
       </div>
-      Music by: "Lopo Bunny"
+      <a href="https://soundcloud.com/lopobunny" target="_blank">Music by: "Lopo Bunny"</a>
     </div>
 
     <!-- Volume control -->
     <div class="tool-container volume-container">
       <div class="icon-container">
-        <img id="volume-icon" src="./assets/images/volume.png"  alt="">
+        <img id="volume-icon" src="./assets/images/volume.png"  alt="volume">
       </div>
       <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" aria-label="volume control">
     </div>
 
-    <!-- PLEASE STYLE ME -->
+    <!-- Change Scene -->
     <div id="toggleBackground" class="tool-container">
       <div class="icon-container">
-        <img src="./assets/images/scene-04.png" alt="description here">
+        <img src="./assets/images/scene-04.png" alt="change scene">
       </div>
       Change Scene
     </div>
@@ -140,11 +132,11 @@
 <footer>
   <h5>Created by:</h5>
   <div class="creators">
-    <a href="https://github.com/hannahschwen">Hannah Schwen</a>
-    <a href="https://github.com/swokamoto">Scott Okamoto</a>
-    <a href="https://github.com/nubsu">Domingo Ornelas</a>
-    <a href="https://github.com/spd34">Sean Drake</a>
-    <a href="https://github.com/Mayenawdk">Mayena Wardak</a>
+    <a href="https://github.com/hannahschwen" target="_blank">Hannah Schwen</a>
+    <a href="https://github.com/swokamoto" target="_blank">Scott Okamoto</a>
+    <a href="https://github.com/nubsu" target="_blank">Domingo Ornelas</a>
+    <a href="https://github.com/spd34" target="_blank">Sean Drake</a>
+    <a href="https://github.com/Mayenawdk" target="_blank">Mayena Wardak</a>
   </div>
 </footer>
 

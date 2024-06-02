@@ -5,10 +5,6 @@
   --blue2: #b7e2ed;
   --blue3: #8cc5e9;
   --green: #8cc63f;
-  --red: #f28585;
-  --orange: #fcb721;
-  --light-gray: #e6e6e6;
-  --dark-gray: #909090;
 }
 
 /* general styles ----------------------*/
@@ -20,17 +16,16 @@ body {
   box-shadow: 0 0 5px #51515126;
 }
 
-/* header styles */
-header {
-  background-color: var(--light);
-  display: flex;
-  padding: 20px 5%;
-  align-items: center;
+a, a:after {
+  text-decoration: none;
+  color: var(--light);
+  font-weight: 500;
 }
 
-header p {
-  text-align: center;
+a:hover {
+  text-decoration: underline;
 }
+
 /* Modal Styles ----------------------*/
 .modal-body {
   display: flex;
@@ -101,6 +96,10 @@ header p {
   cursor: pointer;
 }
 
+#add-container {
+  transition: all 0.12s;
+}
+
 #add-container:hover {
   background-color: var(--green);
 }
@@ -111,9 +110,10 @@ header p {
   margin-right: 10px;
   width: 30px;
   height: 30px;
+  transition: all .12s;
 }
 
-.icon-container:hover, #add-container:hover .icon-container, .volume-container:hover .icon-container {
+.icon-container:hover, #add-container:hover .icon-container, .volume-container:hover .icon-container, #toggleBackground:hover .icon-container {
   background-color: var(--blue2);
   cursor: pointer;
   border-radius: 100%;
@@ -122,13 +122,6 @@ header p {
 .icon-container img {
   width: 100%;
 }
-
-/* #pokeball when pokemon is dragged over it */
-.pokeball-hover {
-  background-color: var(--green);
-}
-
-
 
 /* Campfire section styles ----------------------*/
 .camp-container {
@@ -194,20 +187,19 @@ footer h5 {
 }
 
 footer a {
-  text-decoration: none;
   padding: 8px 20px;
   background-color: var(--blue3);
-  color: var(--light);
-  font-weight: 500;
   margin: 4px;
   border-radius: 40px;
+  transition: all 0.12s;
 }
 
 footer a:hover {
-  background-color: var(--blue2);
+  background-color: var(--green);
 }
 
 .creators {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }

@@ -6,24 +6,20 @@ header {
     color: white;
     text-align: center;
     padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content {
+    max-width: 500px;
 }
 
 .header-content h1 {
     margin: 0;
     font-size: 24px; /* Larger text for emphasis */
     animation: textGlow 2s ease-in-out infinite alternate;
-    text-align: center;
+    margin: 10px 0 20px 0;
 }
-
-.header {
-        height: 100px;           /* Adjust this value to match your design preference */
-        background: linear-gradient(45deg, #ff6347, #1e90ff, #32cd32);
-        width: 100%;             /* Ensures the header takes full width of the viewport */
-        color: white;
-        text-align: center;
-        box-sizing: border-box;  /* Include padding and borders in the element's dimensions */
-    }
-    
 
 .logo {
     width: 80px; /* Larger logo for more visibility */
