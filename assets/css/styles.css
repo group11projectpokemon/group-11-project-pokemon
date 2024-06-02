@@ -210,4 +210,5 @@ footer a:hover {
 .creators {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
