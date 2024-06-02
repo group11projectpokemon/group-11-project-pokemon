@@ -6,7 +6,7 @@ $(document).on('click', '.slot', function() {
     audio.volume = $('#volumeControl').val();
 
     // play the audio
-    // audio.play(); moved this to the below if statement bc it would play the sound if u clicked a space that a pokemon WAS at but isnt anymore
+    // check if there is a source to play
     if(this.children[0].currentSrc){
         fetchChuckNorris(this.dataset.name);
         audio.play();

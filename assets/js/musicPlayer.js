@@ -52,5 +52,4 @@ $(document).ready(function() {
         audio.src = tracks[currentTrack];
         audio.play();
     });
-
 });
