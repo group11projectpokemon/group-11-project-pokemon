@@ -1,3 +1,4 @@
+/* Styles to make the pokemon shake on hover */
 .gelatine:hover {
     animation: gelatine 0.25s;
   }
