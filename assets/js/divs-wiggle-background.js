@@ -67,15 +67,15 @@ function moveDivs0() {
 // set locations and rotate for lounge background
 function moveDivs1() {
   $('.slot').css("width", "20%")
-  $('#slot0').css({"translate": "90% -160%"});
-  $('#slot1').css({"translate": "165% -180%"});
-  $('#slot2').css({"translate": "265% -180%"});
-  $('#slot3').css({"translate": "340% -160%"});
+  $('#slot0').css({"translate": "100% -160%"});
+  $('#slot1').css({"translate": "158% -175%"});
+  $('#slot2').css({"translate": "276% -175%"});
+  $('#slot3').css({"translate": "330% -160%"});
 
-  initialRotate0 = -12; // -12 to -16 center -14deg
-  initialRotate1 = -12; // same
-  initialRotate2 = 16; // 16 to 12 center 14deg
-  initialRotate3 = 16; // same
+  initialRotate0 = -2; // -2 to -6 center -4deg
+  initialRotate1 = -2; // same
+  initialRotate2 = 6; // 6 to 2 center 4deg
+  initialRotate3 = 6; // same
 
   // have to set initial rotate each time the image changes
   setInitialRotate()
